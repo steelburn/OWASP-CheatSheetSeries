@@ -23,8 +23,11 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <link rel="next" href="OAuth2_Cheat_Sheet.html">
       
       
+        
+      
+      
       <link rel="icon" href="../assets/WebSite_Favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -32,10 +35,10 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -58,7 +61,6 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
     
       
 
-    
     
     
   </head>
@@ -153,11 +155,13 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -189,13 +193,14 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -240,7 +245,7 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="https://github.com/OWASP/CheatSheetSeries" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     OWASP/CheatSheetSeries
@@ -260,9 +265,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="../index.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -280,9 +292,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="../Glossary.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Index Alphabetical
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -300,9 +319,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="../IndexASVS.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Index ASVS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -320,9 +346,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="../IndexMASVS.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Index MASVS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -340,9 +373,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="../IndexProactiveControls.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Index Proactive Controls
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -360,9 +400,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="../IndexTopTen.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Index Top 10
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -378,6 +425,7 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
   
   
   
+    
     
     
     
@@ -397,9 +445,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Cheatsheets
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -408,9 +463,41 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            Cheatsheets
+            
+  
+    Cheatsheets
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="AI_Agent_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Agent Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -422,9 +509,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="AJAX_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     AJAX Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -443,9 +537,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Abuse_Case_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Abuse Case
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -464,9 +565,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Access_Control_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Access Control
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -485,9 +593,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Attack_Surface_Analysis_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Attack Surface Analysis
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -506,9 +621,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Authentication_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Authentication
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -527,9 +649,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Authorization_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Authorization
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -548,9 +677,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Authorization_Testing_Automation_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Authorization Testing Automation
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -566,12 +702,19 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
   
   
     <li class="md-nav__item">
-      <a href="Automotive_Security.html" class="md-nav__link">
+      <a href="Automotive_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Automotive Security.md
+    
+  
+    Automotive Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -590,9 +733,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Bean_Validation_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Bean Validation
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Bot_Management_and_Anti-Automation_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bot Management and Anti-Automation
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -611,9 +789,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Browser_Extension_Vulnerabilities_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Browser Extension Vulnerabilities
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Business_Logic_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Logic Security
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -632,9 +845,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="C-Based_Toolchain_Hardening_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     C-Based Toolchain Hardening
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -653,9 +873,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     CI CD Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -674,9 +901,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Choosing_and_Using_Security_Questions_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Choosing and Using Security Questions
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -695,9 +929,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Clickjacking_Defense_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Clickjacking Defense
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -716,9 +957,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Content_Security_Policy_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Content Security Policy
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -737,9 +985,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Cookie_Theft_Mitigation_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Cookie Theft Mitigation
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -758,9 +1013,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Credential_Stuffing_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Credential Stuffing Prevention
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -779,9 +1041,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Cross-Site Request Forgery Prevention
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -800,9 +1069,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Cross Site Scripting Prevention
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -821,9 +1097,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Cryptographic_Storage_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Cryptographic Storage
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -842,9 +1125,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="DOM_Clobbering_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     DOM Clobbering Prevention
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -863,9 +1153,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     DOM based XSS Prevention
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -884,9 +1181,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Database_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Database Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -905,9 +1209,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Denial_of_Service_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Denial of Service
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Dependency_Graph_SBOM_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dependency Graph SBOM
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -926,9 +1265,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Deserialization
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -947,9 +1293,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Django_REST_Framework_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Django REST Framework
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -968,9 +1321,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Django Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -989,9 +1349,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Docker_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Docker Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1010,9 +1377,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="DotNet_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     DotNet Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1031,9 +1405,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Drone_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Drone Security
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Email_Validation_and_Verification_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Email Validation and Verification
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1052,9 +1461,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Error_Handling_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Error Handling
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1073,9 +1489,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="File_Upload_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     File Upload
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1094,9 +1517,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Forgot_Password_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Forgot Password
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="GitHub_Actions_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions Security
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1115,9 +1573,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="GraphQL_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     GraphQL
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1136,9 +1601,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="HTML5_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     HTML5 Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1157,9 +1629,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="HTTP_Headers_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     HTTP Headers
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1178,9 +1657,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="HTTP_Strict_Transport_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     HTTP Strict Transport Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1199,9 +1685,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Infrastructure_as_Code_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Infrastructure as Code Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1220,9 +1713,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Injection Prevention
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1241,9 +1741,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Injection_Prevention_in_Java_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Injection Prevention in Java
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1262,9 +1769,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Input_Validation_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Input Validation
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1283,9 +1797,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Insecure_Direct_Object_Reference_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Insecure Direct Object Reference Prevention
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1304,9 +1825,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="JAAS_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     JAAS
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1325,9 +1853,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="JSON_Web_Token_for_Java_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     JSON Web Token for Java
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1346,9 +1881,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Java_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Java Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1367,9 +1909,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Key_Management_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Key Management
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1388,9 +1937,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Kubernetes_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Kubernetes Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1409,9 +1965,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="LDAP_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     LDAP Injection Prevention
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="LLM_Prompt_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLM Prompt Injection Prevention
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1430,9 +2021,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Laravel_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Laravel
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1451,9 +2049,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Legacy_Application_Management_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Legacy Application Management
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1472,9 +2077,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Logging_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Logging
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1493,9 +2105,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Logging_Vocabulary_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Logging Vocabulary
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="MCP_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Security
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1514,9 +2161,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Mass_Assignment_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Mass Assignment
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1535,9 +2189,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Microservices_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Microservices Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1556,9 +2217,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Microservices_based_Security_Arch_Doc_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Microservices based Security Arch Doc
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1577,9 +2245,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Mobile_Application_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Mobile Application Security
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Multi_Tenant_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Multi Tenant Security
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1598,9 +2301,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Multifactor_Authentication_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Multifactor Authentication
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1619,9 +2329,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="NPM_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     NPM Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1640,9 +2357,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Network_Segmentation_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Network Segmentation
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="NoSQL_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NoSQL Security
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -1661,9 +2413,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="NodeJS_Docker_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     NodeJS Docker
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1691,9 +2450,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Nodejs Security
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -1702,9 +2468,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Nodejs_Security_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Nodejs Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1727,7 +2500,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      
+        Introduction
+      
     </span>
   </a>
   
@@ -1736,7 +2511,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <li class="md-nav__item">
   <a href="#context" class="md-nav__link">
     <span class="md-ellipsis">
-      Context
+      
+        Context
+      
     </span>
   </a>
   
@@ -1745,7 +2522,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <li class="md-nav__item">
   <a href="#objective" class="md-nav__link">
     <span class="md-ellipsis">
-      Objective
+      
+        Objective
+      
     </span>
   </a>
   
@@ -1754,7 +2533,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <li class="md-nav__item">
   <a href="#recommendations" class="md-nav__link">
     <span class="md-ellipsis">
-      Recommendations
+      
+        Recommendations
+      
     </span>
   </a>
   
@@ -1764,7 +2545,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#application-security" class="md-nav__link">
     <span class="md-ellipsis">
-      Application Security
+      
+        Application Security
+      
     </span>
   </a>
   
@@ -1774,7 +2557,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#use-flat-promise-chains" class="md-nav__link">
     <span class="md-ellipsis">
-      Use flat Promise chains
+      
+        Use flat Promise chains
+      
     </span>
   </a>
   
@@ -1783,7 +2568,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#set-request-size-limits" class="md-nav__link">
     <span class="md-ellipsis">
-      Set request size limits
+      
+        Set request size limits
+      
     </span>
   </a>
   
@@ -1792,7 +2579,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#do-not-block-the-event-loop" class="md-nav__link">
     <span class="md-ellipsis">
-      Do not block the event loop
+      
+        Do not block the event loop
+      
     </span>
   </a>
   
@@ -1801,7 +2590,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#perform-input-validation" class="md-nav__link">
     <span class="md-ellipsis">
-      Perform input validation
+      
+        Perform input validation
+      
     </span>
   </a>
   
@@ -1810,7 +2601,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#perform-output-escaping" class="md-nav__link">
     <span class="md-ellipsis">
-      Perform output escaping
+      
+        Perform output escaping
+      
     </span>
   </a>
   
@@ -1819,7 +2612,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#perform-application-activity-logging" class="md-nav__link">
     <span class="md-ellipsis">
-      Perform application activity logging
+      
+        Perform application activity logging
+      
     </span>
   </a>
   
@@ -1828,7 +2623,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#monitor-the-event-loop" class="md-nav__link">
     <span class="md-ellipsis">
-      Monitor the event loop
+      
+        Monitor the event loop
+      
     </span>
   </a>
   
@@ -1837,7 +2634,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#take-precautions-against-brute-forcing" class="md-nav__link">
     <span class="md-ellipsis">
-      Take precautions against brute-forcing
+      
+        Take precautions against brute-forcing
+      
     </span>
   </a>
   
@@ -1846,7 +2645,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#use-anti-csrf-tokens" class="md-nav__link">
     <span class="md-ellipsis">
-      Use Anti-CSRF tokens
+      
+        Use Anti-CSRF tokens
+      
     </span>
   </a>
   
@@ -1855,7 +2656,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#remove-unnecessary-routes" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove unnecessary routes
+      
+        Remove unnecessary routes
+      
     </span>
   </a>
   
@@ -1864,7 +2667,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#prevent-http-parameter-pollution" class="md-nav__link">
     <span class="md-ellipsis">
-      Prevent HTTP Parameter Pollution
+      
+        Prevent HTTP Parameter Pollution
+      
     </span>
   </a>
   
@@ -1873,7 +2678,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#only-return-what-is-necessary" class="md-nav__link">
     <span class="md-ellipsis">
-      Only return what is necessary
+      
+        Only return what is necessary
+      
     </span>
   </a>
   
@@ -1882,7 +2689,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#use-object-property-descriptors" class="md-nav__link">
     <span class="md-ellipsis">
-      Use object property descriptors
+      
+        Use object property descriptors
+      
     </span>
   </a>
   
@@ -1891,7 +2700,48 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#use-access-control-lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Use access control lists
+      
+        Use access control lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
     </span>
   </a>
   
@@ -1905,17 +2755,21 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#error-exception-handling" class="md-nav__link">
     <span class="md-ellipsis">
-      Error &amp; Exception Handling
+      
+        Error &amp; Exception Handling
+      
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Error & Exception Handling">
+    <nav class="md-nav" aria-label="Error &amp; Exception Handling">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#handle-uncaughtexception" class="md-nav__link">
     <span class="md-ellipsis">
-      Handle uncaughtException
+      
+        Handle uncaughtException
+      
     </span>
   </a>
   
@@ -1924,7 +2778,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#listen-to-errors-when-using-eventemitter" class="md-nav__link">
     <span class="md-ellipsis">
-      Listen to errors when using EventEmitter
+      
+        Listen to errors when using EventEmitter
+      
     </span>
   </a>
   
@@ -1933,7 +2789,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#handle-errors-in-asynchronous-calls" class="md-nav__link">
     <span class="md-ellipsis">
-      Handle errors in asynchronous calls
+      
+        Handle errors in asynchronous calls
+      
     </span>
   </a>
   
@@ -1947,7 +2805,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#server-security" class="md-nav__link">
     <span class="md-ellipsis">
-      Server Security
+      
+        Server Security
+      
     </span>
   </a>
   
@@ -1957,7 +2817,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#set-cookie-flags-appropriately" class="md-nav__link">
     <span class="md-ellipsis">
-      Set cookie flags appropriately
+      
+        Set cookie flags appropriately
+      
     </span>
   </a>
   
@@ -1966,7 +2828,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#use-appropriate-security-headers" class="md-nav__link">
     <span class="md-ellipsis">
-      Use appropriate security headers
+      
+        Use appropriate security headers
+      
     </span>
   </a>
   
@@ -1980,7 +2844,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#platform-security" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Security
+      
+        Platform Security
+      
     </span>
   </a>
   
@@ -1990,7 +2856,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#keep-your-packages-up-to-date" class="md-nav__link">
     <span class="md-ellipsis">
-      Keep your packages up-to-date
+      
+        Keep your packages up-to-date
+      
     </span>
   </a>
   
@@ -1999,7 +2867,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#do-not-use-dangerous-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Do not use dangerous functions
+      
+        Do not use dangerous functions
+      
     </span>
   </a>
   
@@ -2008,7 +2878,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#stay-away-from-evil-regexes" class="md-nav__link">
     <span class="md-ellipsis">
-      Stay away from evil regexes
+      
+        Stay away from evil regexes
+      
     </span>
   </a>
   
@@ -2017,7 +2889,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#run-security-linters" class="md-nav__link">
     <span class="md-ellipsis">
-      Run security linters
+      
+        Run security linters
+      
     </span>
   </a>
   
@@ -2026,7 +2900,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#use-strict-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Use strict mode
+      
+        Use strict mode
+      
     </span>
   </a>
   
@@ -2035,7 +2911,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#adhere-to-general-application-security-principles" class="md-nav__link">
     <span class="md-ellipsis">
-      Adhere to general application security principles
+      
+        Adhere to general application security principles
+      
     </span>
   </a>
   
@@ -2054,7 +2932,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <li class="md-nav__item">
   <a href="#additional-resources-about-nodejs-security" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional resources about Node.js security
+      
+        Additional resources about Node.js security
+      
     </span>
   </a>
   
@@ -2079,9 +2959,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     OAuth2
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2100,9 +2987,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     OS Command Injection Defense
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2121,9 +3015,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="PHP_Configuration_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     PHP Configuration
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2142,9 +3043,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Password_Storage_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Password Storage
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2163,9 +3071,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Pinning_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Pinning
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2184,9 +3099,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Prototype_Pollution_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Prototype Pollution Prevention
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2205,9 +3127,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Query_Parameterization_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Query Parameterization
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="RAG_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RAG Security
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2226,9 +3183,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="REST_Assessment_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     REST Assessment
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2247,9 +3211,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="REST_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     REST Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2268,9 +3239,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Ruby_on_Rails_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Ruby on Rails
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2289,9 +3267,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="SAML_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     SAML Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2310,9 +3295,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="SQL_Injection_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     SQL Injection Prevention
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2331,9 +3323,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Secrets_Management_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Secrets Management
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Secure_AI_Model_Ops_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secure AI Model Ops
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2352,9 +3379,72 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Secure_Cloud_Architecture_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Secure Cloud Architecture
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Secure_Code_Review_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secure Code Review
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Secure_Coding_with_AI_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Secure Coding with AI
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2373,9 +3463,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Secure_Product_Design_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Secure Product Design
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2394,9 +3491,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Securing_Cascading_Style_Sheets_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Securing Cascading Style Sheets
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Security_Terminology_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security Terminology
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2415,9 +3547,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Server Side Request Forgery Prevention
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Serverless_FaaS_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Serverless FaaS Security
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2436,9 +3603,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Session_Management_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Session Management
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2457,9 +3631,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Software_Supply_Chain_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Software Supply Chain Security
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Subdomain_Takeover_Prevention_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Subdomain Takeover Prevention
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2478,9 +3687,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Symfony
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2499,9 +3715,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     TLS Cipher String
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2520,9 +3743,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Third_Party_Javascript_Management_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Third Party Javascript Management
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Third_Party_Payment_Gateway_Integration_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Third Party Payment Gateway Integration
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2541,9 +3799,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Threat_Modeling_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Threat Modeling
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2562,9 +3827,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Transaction_Authorization_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Transaction Authorization
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2583,9 +3855,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Transport_Layer_Protection_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Transport Layer Protection
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2604,9 +3883,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Transport Layer Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2625,9 +3911,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Unvalidated Redirects and Forwards
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2646,9 +3939,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="User_Privacy_Protection_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     User Privacy Protection
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2667,9 +3967,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Virtual_Patching_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Virtual Patching
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2688,9 +3995,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Vulnerability_Disclosure_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Vulnerability Disclosure
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2709,9 +4023,44 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Vulnerable_Dependency_Management_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Vulnerable Dependency Management
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="WebSocket_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WebSocket Security
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2730,9 +4079,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="Web_Service_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Web Service Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2751,9 +4107,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="XML_External_Entity_Prevention_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     XML External Entity Prevention
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2772,9 +4135,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="XML_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     XML Security
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2793,9 +4163,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="XSS_Filter_Evasion_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     XSS Filter Evasion
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2814,9 +4191,72 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
       <a href="XS_Leaks_Cheat_Sheet.html" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     XS Leaks
+  
+
+    
   </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Zero_Trust_Architecture_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Zero Trust Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="gRPC_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    gRPC Security
+  
+
+    
+  </span>
+  
   
 
       </a>
@@ -2861,7 +4301,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     <span class="md-ellipsis">
-      Introduction
+      
+        Introduction
+      
     </span>
   </a>
   
@@ -2870,7 +4312,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <li class="md-nav__item">
   <a href="#context" class="md-nav__link">
     <span class="md-ellipsis">
-      Context
+      
+        Context
+      
     </span>
   </a>
   
@@ -2879,7 +4323,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <li class="md-nav__item">
   <a href="#objective" class="md-nav__link">
     <span class="md-ellipsis">
-      Objective
+      
+        Objective
+      
     </span>
   </a>
   
@@ -2888,7 +4334,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <li class="md-nav__item">
   <a href="#recommendations" class="md-nav__link">
     <span class="md-ellipsis">
-      Recommendations
+      
+        Recommendations
+      
     </span>
   </a>
   
@@ -2898,7 +4346,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#application-security" class="md-nav__link">
     <span class="md-ellipsis">
-      Application Security
+      
+        Application Security
+      
     </span>
   </a>
   
@@ -2908,7 +4358,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#use-flat-promise-chains" class="md-nav__link">
     <span class="md-ellipsis">
-      Use flat Promise chains
+      
+        Use flat Promise chains
+      
     </span>
   </a>
   
@@ -2917,7 +4369,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#set-request-size-limits" class="md-nav__link">
     <span class="md-ellipsis">
-      Set request size limits
+      
+        Set request size limits
+      
     </span>
   </a>
   
@@ -2926,7 +4380,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#do-not-block-the-event-loop" class="md-nav__link">
     <span class="md-ellipsis">
-      Do not block the event loop
+      
+        Do not block the event loop
+      
     </span>
   </a>
   
@@ -2935,7 +4391,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#perform-input-validation" class="md-nav__link">
     <span class="md-ellipsis">
-      Perform input validation
+      
+        Perform input validation
+      
     </span>
   </a>
   
@@ -2944,7 +4402,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#perform-output-escaping" class="md-nav__link">
     <span class="md-ellipsis">
-      Perform output escaping
+      
+        Perform output escaping
+      
     </span>
   </a>
   
@@ -2953,7 +4413,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#perform-application-activity-logging" class="md-nav__link">
     <span class="md-ellipsis">
-      Perform application activity logging
+      
+        Perform application activity logging
+      
     </span>
   </a>
   
@@ -2962,7 +4424,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#monitor-the-event-loop" class="md-nav__link">
     <span class="md-ellipsis">
-      Monitor the event loop
+      
+        Monitor the event loop
+      
     </span>
   </a>
   
@@ -2971,7 +4435,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#take-precautions-against-brute-forcing" class="md-nav__link">
     <span class="md-ellipsis">
-      Take precautions against brute-forcing
+      
+        Take precautions against brute-forcing
+      
     </span>
   </a>
   
@@ -2980,7 +4446,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#use-anti-csrf-tokens" class="md-nav__link">
     <span class="md-ellipsis">
-      Use Anti-CSRF tokens
+      
+        Use Anti-CSRF tokens
+      
     </span>
   </a>
   
@@ -2989,7 +4457,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#remove-unnecessary-routes" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove unnecessary routes
+      
+        Remove unnecessary routes
+      
     </span>
   </a>
   
@@ -2998,7 +4468,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#prevent-http-parameter-pollution" class="md-nav__link">
     <span class="md-ellipsis">
-      Prevent HTTP Parameter Pollution
+      
+        Prevent HTTP Parameter Pollution
+      
     </span>
   </a>
   
@@ -3007,7 +4479,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#only-return-what-is-necessary" class="md-nav__link">
     <span class="md-ellipsis">
-      Only return what is necessary
+      
+        Only return what is necessary
+      
     </span>
   </a>
   
@@ -3016,7 +4490,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#use-object-property-descriptors" class="md-nav__link">
     <span class="md-ellipsis">
-      Use object property descriptors
+      
+        Use object property descriptors
+      
     </span>
   </a>
   
@@ -3025,7 +4501,48 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#use-access-control-lists" class="md-nav__link">
     <span class="md-ellipsis">
-      Use access control lists
+      
+        Use access control lists
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
     </span>
   </a>
   
@@ -3039,17 +4556,21 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#error-exception-handling" class="md-nav__link">
     <span class="md-ellipsis">
-      Error &amp; Exception Handling
+      
+        Error &amp; Exception Handling
+      
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Error & Exception Handling">
+    <nav class="md-nav" aria-label="Error &amp; Exception Handling">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#handle-uncaughtexception" class="md-nav__link">
     <span class="md-ellipsis">
-      Handle uncaughtException
+      
+        Handle uncaughtException
+      
     </span>
   </a>
   
@@ -3058,7 +4579,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#listen-to-errors-when-using-eventemitter" class="md-nav__link">
     <span class="md-ellipsis">
-      Listen to errors when using EventEmitter
+      
+        Listen to errors when using EventEmitter
+      
     </span>
   </a>
   
@@ -3067,7 +4590,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#handle-errors-in-asynchronous-calls" class="md-nav__link">
     <span class="md-ellipsis">
-      Handle errors in asynchronous calls
+      
+        Handle errors in asynchronous calls
+      
     </span>
   </a>
   
@@ -3081,7 +4606,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#server-security" class="md-nav__link">
     <span class="md-ellipsis">
-      Server Security
+      
+        Server Security
+      
     </span>
   </a>
   
@@ -3091,7 +4618,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#set-cookie-flags-appropriately" class="md-nav__link">
     <span class="md-ellipsis">
-      Set cookie flags appropriately
+      
+        Set cookie flags appropriately
+      
     </span>
   </a>
   
@@ -3100,7 +4629,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#use-appropriate-security-headers" class="md-nav__link">
     <span class="md-ellipsis">
-      Use appropriate security headers
+      
+        Use appropriate security headers
+      
     </span>
   </a>
   
@@ -3114,7 +4645,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#platform-security" class="md-nav__link">
     <span class="md-ellipsis">
-      Platform Security
+      
+        Platform Security
+      
     </span>
   </a>
   
@@ -3124,7 +4657,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#keep-your-packages-up-to-date" class="md-nav__link">
     <span class="md-ellipsis">
-      Keep your packages up-to-date
+      
+        Keep your packages up-to-date
+      
     </span>
   </a>
   
@@ -3133,7 +4668,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#do-not-use-dangerous-functions" class="md-nav__link">
     <span class="md-ellipsis">
-      Do not use dangerous functions
+      
+        Do not use dangerous functions
+      
     </span>
   </a>
   
@@ -3142,7 +4679,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#stay-away-from-evil-regexes" class="md-nav__link">
     <span class="md-ellipsis">
-      Stay away from evil regexes
+      
+        Stay away from evil regexes
+      
     </span>
   </a>
   
@@ -3151,7 +4690,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#run-security-linters" class="md-nav__link">
     <span class="md-ellipsis">
-      Run security linters
+      
+        Run security linters
+      
     </span>
   </a>
   
@@ -3160,7 +4701,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#use-strict-mode" class="md-nav__link">
     <span class="md-ellipsis">
-      Use strict mode
+      
+        Use strict mode
+      
     </span>
   </a>
   
@@ -3169,7 +4712,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           <li class="md-nav__item">
   <a href="#adhere-to-general-application-security-principles" class="md-nav__link">
     <span class="md-ellipsis">
-      Adhere to general application security principles
+      
+        Adhere to general application security principles
+      
     </span>
   </a>
   
@@ -3188,7 +4733,9 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
         <li class="md-nav__item">
   <a href="#additional-resources-about-nodejs-security" class="md-nav__link">
     <span class="md-ellipsis">
-      Additional resources about Node.js security
+      
+        Additional resources about Node.js security
+      
     </span>
   </a>
   
@@ -3204,9 +4751,11 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+
 
   
   
@@ -3515,7 +5064,7 @@ For detailed information on input validation, please refer to <a href="https://c
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">hpp</span><span class="p">());</span>
 </code></pre></div>
 <h4 id="only-return-what-is-necessary">Only return what is necessary<a class="headerlink" href="#only-return-what-is-necessary" title="Permanent link">&para;</a></h4>
-<p>Information about the users of an application is among the most critical information about the application. User tables generally include fields like id, username, full name, email address, birth date, password and in some cases social security numbers. Therefore, when querying and using user objects, you need to return only needed fields as it may be vulnerable to personal information disclosure. This is also correct for other objects stored on the database. If you just need a certain field of an object, you should only return the specific fields required. As an example, you can use a function like the following whenever you need to get information on a user. By doing so, you can only return the fields that are needed for your specific operation. In other words, if you only need to list names of the users available, you are not returning their email addresses or credit card numbers in addition to their full names.</p>
+<p>Information about the users of an application is among the most critical information about the application. User tables generally include fields like ID, username, full name, email address, birth date, password and in some cases social security numbers. Therefore, when querying and using user objects, you need to return only needed fields as it may be vulnerable to personal information disclosure. This is also correct for other objects stored on the database. If you just need a certain field of an object, you should only return the specific fields required. As an example, you can use a function like the following whenever you need to get information on a user. By doing so, you can only return the fields that are needed for your specific operation. In other words, if you only need to list names of the users available, you are not returning their email addresses or credit card numbers in addition to their full names.</p>
 <div class="highlight"><pre><span></span><code><span class="nx">exports</span><span class="p">.</span><span class="nx">sanitizeUser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
@@ -3537,6 +5086,36 @@ For detailed information on input validation, please refer to <a href="https://c
 <p>Apart from these, there are some special functions for object attributes. <code>Object.preventExtensions()</code> prevents new properties from being added to the object.</p>
 <h4 id="use-access-control-lists">Use access control lists<a class="headerlink" href="#use-access-control-lists" title="Permanent link">&para;</a></h4>
 <p>Authorization prevents users from acting outside of their intended permissions. In order to do so, users and their roles should be determined with consideration of the principle of least privilege. Each user role should only have access to the resources they must use. For your Node.js applications, you can use the <a href="https://www.npmjs.com/package/acl">acl</a> module to provide ACL (access control list) implementation. With this module, you can create roles and assign users to these roles.</p>
+<h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
+<p>Starting with Node.js v20, a Permission Model is available to restrict application privileges. As of Node.js v23.5.0, the model is considered stable and can be enabled using the <code>--permission</code> flag (earlier versions require <code>--experimental-permission</code>).</p>
+<h4 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code>node<span class="w"> </span>--permission<span class="w"> </span><span class="o">[</span>--allow-&lt;type&gt;<span class="o">=</span>...<span class="o">]</span><span class="w"> </span>app.js
+</code></pre></div>
+<h4 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h4>
+<p>Use only <code>--permission</code> to restrict all permissions by default:</p>
+<div class="highlight"><pre><span></span><code>node<span class="w"> </span>--permission<span class="w"> </span>index.js
+</code></pre></div>
+<p>Use <code>--allow‑fs‑read</code> to specify which files or directories Node.js is allowed to read. This is especially useful to prevent Local File Inclusion (LFI) vulnerabilities:</p>
+<div class="highlight"><pre><span></span><code>node<span class="w"> </span>--permission<span class="w"> </span>--allow-fs-read<span class="o">=</span>/uploads/<span class="w"> </span>index.js
+</code></pre></div>
+<p>Use <code>--allow-fs-write</code> to specify where Node.js is allowed to write files:</p>
+<div class="highlight"><pre><span></span><code>node<span class="w"> </span>--permission<span class="w"> </span>--allow-fs-write<span class="o">=</span>/uploads/<span class="w"> </span>index.js
+</code></pre></div>
+<p>Unauthorized access triggers a runtime error:</p>
+<div class="highlight"><pre><span></span><code>Error: Access to this API has been restricted
+code: &#39;ERR_ACCESS_DENIED&#39;
+permission: &#39;FileSystemRead&#39;
+resource: &#39;/path/to/file&#39;
+</code></pre></div>
+<p>Other flags:</p>
+<ul>
+<li><code>--allow-child-process</code> — allows using <code>child_process</code> APIs</li>
+<li><code>--allow-worker</code> — allows usage of <code>worker_threads</code> APIs</li>
+<li><code>--allow-addons</code> — enables loading native addons</li>
+<li><code>--allow-wasi</code> — enables usage of WASI modules</li>
+</ul>
+<p><strong>Important note:</strong> Symbolic links are followed even if they point outside the allowed paths. This means that relative symlinks can bypass restrictions and grant unintended access. To stay secure make sure no allowed paths include relative symbolic links when using the permission model.</p>
+<p>For more details refer to the <a href="https://nodejs.org/api/permissions.html">official documentation</a>.</p>
 <h3 id="error-exception-handling">Error &amp; Exception Handling<a class="headerlink" href="#error-exception-handling" title="Permanent link">&para;</a></h3>
 <h4 id="handle-uncaughtexception">Handle uncaughtException<a class="headerlink" href="#handle-uncaughtexception" title="Permanent link">&para;</a></h4>
 <p>Node.js behavior for uncaught exceptions is to print current stack trace and then terminate the thread. However, Node.js allows customization of this behavior. It provides a global object named process that is available to all Node.js applications. It is an EventEmitter object and in case of an uncaught exception, uncaughtException event is emitted and it is brought up to the main event loop. In order to provide a custom behavior for uncaught exceptions, you can bind to this event. However, resuming the application after such an uncaught exception can lead to further problems. Therefore, if you do not want to miss any uncaught exception, you should bind to uncaughtException event and cleanup any allocated resources like file descriptors, handles and similar before shutting down the process. Resuming the application is strongly discouraged as the application will be in an unknown state. It is important to note that when displaying error messages to the user in case of an uncaught exception, detailed information like stack traces should not be revealed to the user. Instead, custom error messages should be shown to the users in order not to cause any information leakage.</p>
@@ -3738,10 +5317,13 @@ Below is a list of HTTP security headers covered by <code>helmet</code> middlewa
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
