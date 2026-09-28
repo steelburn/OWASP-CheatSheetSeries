@@ -33,10 +33,6 @@
          <lastmod>2026-09-28</lastmod>
     </url>
     <url>
-         <loc>https://cheatsheetseries.owasp.org/cheatsheets/AJAX_Security_Cheat_Sheet.html</loc>
-         <lastmod>2026-09-28</lastmod>
-    </url>
-    <url>
          <loc>https://cheatsheetseries.owasp.org/cheatsheets/AML_Sanctions_AI_Agent_Payments_Cheat_Sheet.html</loc>
          <lastmod>2026-09-28</lastmod>
     </url>
@@ -337,6 +333,10 @@
          <lastmod>2026-09-28</lastmod>
     </url>
     <url>
+         <loc>https://cheatsheetseries.owasp.org/cheatsheets/Passkey_Security_Cheat_Sheet.html</loc>
+         <lastmod>2026-09-28</lastmod>
+    </url>
+    <url>
          <loc>https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html</loc>
          <lastmod>2026-09-28</lastmod>
     </url>
@@ -478,6 +478,10 @@
     </url>
     <url>
          <loc>https://cheatsheetseries.owasp.org/cheatsheets/WebSocket_Security_Cheat_Sheet.html</loc>
+         <lastmod>2026-09-28</lastmod>
+    </url>
+    <url>
+         <loc>https://cheatsheetseries.owasp.org/cheatsheets/Web_Frontend_Security_Cheat_Sheet.html</loc>
          <lastmod>2026-09-28</lastmod>
     </url>
     <url>
