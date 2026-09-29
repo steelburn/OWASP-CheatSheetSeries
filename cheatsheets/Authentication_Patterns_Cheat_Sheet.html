@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html">
+        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Patterns_Cheat_Sheet.html">
       
       
-        <link rel="prev" href="Dependency_Graph_SBOM_Cheat_Sheet.html">
+        <link rel="prev" href="Authentication_Cheat_Sheet.html">
       
       
-        <link rel="next" href="Django_REST_Framework_Cheat_Sheet.html">
+        <link rel="next" href="Authorization_Cheat_Sheet.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Deserialization - OWASP Cheat Sheet Series</title>
+        <title>Authentication Patterns - OWASP Cheat Sheet Series</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deserialization-cheat-sheet" class="md-skip">
+        <a href="#authentication-patterns-cheat-sheet" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deserialization
+              Authentication Patterns
             
           </span>
         </div>
@@ -667,10 +667,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="Authentication_Patterns_Cheat_Sheet.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Authentication Patterns
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="Authentication_Patterns_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -686,6 +713,282 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-level-embedded-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service-Level Embedded Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service-Level Embedded Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cons
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-level-code-mediated-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service-Level Code-Mediated Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service-Level Code-Mediated Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cons_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cons
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-level-proxy-mediated-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Service-Level Proxy-Mediated Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service-Level Proxy-Mediated Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cons_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cons
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-level-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge-Level Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Edge-Level Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cons_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cons
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-layer-node-level-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network-Layer (Node-Level) Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network-Layer (Node-Level) Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cons_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cons
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operational-and-security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational and Security Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operational and Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operational-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendations
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1339,37 +1642,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Deserialization
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="Deserialization_Cheat_Sheet.html" class="md-nav__link">
         
   
   
@@ -1385,359 +1661,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Introduction
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-deserialization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What is Deserialization
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guidance-on-deserializing-objects-safely" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guidance on Deserializing Objects Safely
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Guidance on Deserializing Objects Safely">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#php" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        PHP
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PHP">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clear-box-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Clear-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Python">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#opaque-box-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Opaque-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clear-box-review_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Clear-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#java" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Java
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Java">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clear-box-review_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Clear-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opaque-box-review_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Opaque-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prevent-data-leakage-and-trusted-field-clobbering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prevent Data Leakage and Trusted Field Clobbering
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prevent-deserialization-of-domain-objects" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prevent Deserialization of Domain Objects
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#harden-your-own-javaioobjectinputstream" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Harden Your Own java.io.ObjectInputStream
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#harden-all-javaioobjectinputstream-usage-with-an-agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Harden All java.io.ObjectInputStream Usage with an Agent
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-deserialization-libraries-and-formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Other Deserialization Libraries and Formats
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#net-csharp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        .Net CSharp
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=".Net CSharp">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clear-box-review_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Clear-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opaque-box-review_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Opaque-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#general-precautions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        General Precautions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#known-net-rce-gadgets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Known .NET RCE Gadgets
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#language-agnostic-methods-for-deserializing-safely" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Language-Agnostic Methods for Deserializing Safely
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Language-Agnostic Methods for Deserializing Safely">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-alternative-data-formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using Alternative Data Formats
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#only-deserialize-signed-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Only Deserialize Signed Data
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mitigation-toolslibraries" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mitigation Tools/Libraries
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#detection-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Detection Tools
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        References
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4364,73 +4287,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#what-is-deserialization" class="md-nav__link">
+  <a href="#service-level-embedded-authentication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is Deserialization
+        Service-Level Embedded Authentication
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#guidance-on-deserializing-objects-safely" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Guidance on Deserializing Objects Safely
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Guidance on Deserializing Objects Safely">
+    <nav class="md-nav" aria-label="Service-Level Embedded Authentication">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#php" class="md-nav__link">
+  <a href="#pros" class="md-nav__link">
     <span class="md-ellipsis">
       
-        PHP
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="PHP">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clear-box-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Clear-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#python" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Python
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Python">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#opaque-box-review" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Opaque-box Review
+        Pros
       
     </span>
   </a>
@@ -4438,209 +4310,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#clear-box-review_1" class="md-nav__link">
+  <a href="#cons" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Clear-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#java" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Java
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Java">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clear-box-review_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Clear-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opaque-box-review_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Opaque-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prevent-data-leakage-and-trusted-field-clobbering" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prevent Data Leakage and Trusted Field Clobbering
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prevent-deserialization-of-domain-objects" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prevent Deserialization of Domain Objects
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#harden-your-own-javaioobjectinputstream" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Harden Your Own java.io.ObjectInputStream
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#harden-all-javaioobjectinputstream-usage-with-an-agent" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Harden All java.io.ObjectInputStream Usage with an Agent
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#other-deserialization-libraries-and-formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Other Deserialization Libraries and Formats
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#net-csharp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        .Net CSharp
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label=".Net CSharp">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#clear-box-review_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Clear-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#opaque-box-review_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Opaque-box Review
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#general-precautions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        General Precautions
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#known-net-rce-gadgets" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Known .NET RCE Gadgets
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#language-agnostic-methods-for-deserializing-safely" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Language-Agnostic Methods for Deserializing Safely
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Language-Agnostic Methods for Deserializing Safely">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#using-alternative-data-formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Using Alternative Data Formats
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#only-deserialize-signed-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Only Deserialize Signed Data
+        Cons
       
     </span>
   </a>
@@ -4653,32 +4326,205 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mitigation-toolslibraries" class="md-nav__link">
+  <a href="#service-level-code-mediated-authentication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Mitigation Tools/Libraries
+        Service-Level Code-Mediated Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service-Level Code-Mediated Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pros
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#detection-tools" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#cons_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Detection Tools
+        Cons
       
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
+  <a href="#service-level-proxy-mediated-authentication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        References
+        Service-Level Proxy-Mediated Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service-Level Proxy-Mediated Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cons_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cons
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge-level-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge-Level Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Edge-Level Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cons_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cons
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-layer-node-level-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network-Layer (Node-Level) Authentication
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network-Layer (Node-Level) Authentication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pros_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pros
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cons_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cons
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operational-and-security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational and Security Considerations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Operational and Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operational-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operational Considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security Considerations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommendations
       
     </span>
   </a>
@@ -4705,313 +4551,167 @@
   
 
 
-<h1 id="deserialization-cheat-sheet">Deserialization Cheat Sheet<a class="headerlink" href="#deserialization-cheat-sheet" title="Permanent link">&para;</a></h1>
+<h1 id="authentication-patterns-cheat-sheet">Authentication Patterns Cheat Sheet<a class="headerlink" href="#authentication-patterns-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>This article is focused on providing clear, actionable guidance for safely deserializing untrusted data in your applications.</p>
-<h2 id="what-is-deserialization">What is Deserialization<a class="headerlink" href="#what-is-deserialization" title="Permanent link">&para;</a></h2>
-<p><strong>Serialization</strong> is the process of turning some object into a data format that can be restored later. People often serialize objects in order to save them for storage, or to send as part of communications.</p>
-<p><strong>Deserialization</strong> is the reverse of that process, taking data structured in some format, and rebuilding it into an object. Today, the most popular data format for serializing data is JSON. Before that, it was XML.</p>
-<p>However, many programming languages have native ways to serialize objects. These native formats usually offer more features than JSON or XML, including customization of the serialization process.</p>
-<p>Unfortunately, the features of these native deserialization mechanisms can sometimes be repurposed for malicious effect when operating on untrusted data. Attacks against deserializers have been found to allow denial-of-service, access control, or remote code execution (RCE) attacks.</p>
-<h2 id="guidance-on-deserializing-objects-safely">Guidance on Deserializing Objects Safely<a class="headerlink" href="#guidance-on-deserializing-objects-safely" title="Permanent link">&para;</a></h2>
-<p>The following language-specific guidance attempts to enumerate safe methodologies for deserializing data that can't be trusted.</p>
-<h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
-<h4 id="clear-box-review">Clear-box Review<a class="headerlink" href="#clear-box-review" title="Permanent link">&para;</a></h4>
-<p>Check the use of <a href="https://www.php.net/manual/en/function.unserialize.php"><code>unserialize()</code></a> function and review how the external parameters are accepted. Use a safe, standard data interchange format such as JSON (via <code>json_decode()</code> and <code>json_encode()</code>) if you need to pass serialized data to the user.</p>
-<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
-<h4 id="opaque-box-review">Opaque-box Review<a class="headerlink" href="#opaque-box-review" title="Permanent link">&para;</a></h4>
-<p>If the traffic data contains the symbol dot <code>.</code> at the end, it's very likely that the data was sent in serialization. It will be only true if the data is not being encoded using Base64 or Hexadecimal schemas. If the data is being encoded, then it's best to check if the serialization is likely happening or not by looking at the starting characters of the parameter value. For example if data is Base64 encoded, then it will most likely start with <code>gASV</code>.</p>
-<h4 id="clear-box-review_1">Clear-box Review<a class="headerlink" href="#clear-box-review_1" title="Permanent link">&para;</a></h4>
-<p>The following API in Python will be vulnerable to serialization attack. Search code for the pattern below.</p>
-<ol>
-<li>The uses of <code>pickle/c_pickle/_pickle</code> with <code>load/loads</code>:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pickle</span>
-<span class="n">data</span> <span class="o">=</span> <span class="s2">""" cos.system(S'dir')tR. """</span>
-<span class="n">pickle</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</code></pre></div>
-<ol start="2">
-<li>Uses of <code>PyYAML</code> with <code>load</code>:</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">yaml</span>
-<span class="n">document</span> <span class="o">=</span> <span class="s2">"!!python/object/apply:os.system ['ipconfig']"</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">document</span><span class="p">))</span>
-</code></pre></div>
-<ol start="3">
-<li>Uses of <code>jsonpickle</code> with <code>encode</code> or <code>store</code> methods.</li>
-</ol>
-<h3 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h3>
-<p>The following techniques are all good for preventing attacks against deserialization against <a href="https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">Java's Serializable format</a>.</p>
-<p>Implementation advice:</p>
+<p>Authentication can be enforced at different layers of a system's architecture. This cheat sheet compares the main patterns, where verification happens in each, and what that means for trust boundaries:</p>
 <ul>
-<li>In your code, override the <code>ObjectInputStream#resolveClass()</code> method to prevent arbitrary classes from being deserialized. This safe behavior can be wrapped in a library like <a href="https://github.com/ikkisoft/SerialKiller">SerialKiller</a>.</li>
-<li>Use a safe replacement for the generic <code>readObject()</code> method as seen here. Note that this addresses "<a href="https://en.wikipedia.org/wiki/Billion_laughs_attack">billion laughs</a>" type attacks by checking input length and number of objects deserialized.</li>
+<li><strong>Service-Level:</strong> each service verifies identity itself, or delegates it to a proxy tightly coupled to it.</li>
+<li><strong>Edge-Level:</strong> authentication is centralized in a shared component at the system boundary.</li>
+<li><strong>Network-Layer (Node-Level):</strong> peers are authenticated cryptographically at the network layer, transparently to applications.</li>
 </ul>
-<h4 id="clear-box-review_2">Clear-box Review<a class="headerlink" href="#clear-box-review_2" title="Permanent link">&para;</a></h4>
-<p>Be aware of the following Java API uses for potential serialization vulnerability.</p>
-<p>1. <code>XMLdecoder</code> with external user defined parameters</p>
-<p>2. <code>XStream</code> with <code>fromXML</code> method (xstream version &lt;= v1.4.6 is vulnerable to the serialization issue)</p>
-<p>3. <code>ObjectInputStream</code> with <code>readObject</code></p>
-<p>4. Uses of <code>readObject</code>, <code>readObjectNoData</code>, <code>readResolve</code> or <code>readExternal</code></p>
-<p>5. <code>ObjectInputStream.readUnshared</code></p>
-<p>6. <code>Serializable</code></p>
-<h4 id="opaque-box-review_1">Opaque-box Review<a class="headerlink" href="#opaque-box-review_1" title="Permanent link">&para;</a></h4>
-<p>If the captured traffic data includes the following patterns, it may suggest that the data was sent in Java serialization streams:</p>
+<p>The patterns apply to <strong>external</strong> actors (end users and client applications outside the system) and to <strong>internal</strong> actors (services, other workloads, and the nodes they run on), although the mechanisms and trust assumptions differ. Most systems authenticate in two phases:</p>
 <ul>
-<li><code>AC ED 00 05</code> in Hex</li>
-<li><code>rO0</code> in Base64</li>
-<li><code>Content-type</code> header of an HTTP response set to <code>application/x-java-serialized-object</code></li>
+<li><strong>Primary authentication</strong> verifies a credential and links it to a known identity: a password, a signed challenge such as a <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Authentication_API">WebAuthn assertion</a>, or, for internal actors, a machine certificate or a workload identity such as a <a href="https://spiffe.io/docs/latest/spiffe-about/overview/">SPIFFE ID</a>.</li>
+<li><strong>Authentication proof verification</strong> checks the reusable artifact issued after primary authentication (a session cookie, token, or assertion at the application layer; a TLS session key or IPsec Security Association at lower layers) so that primary authentication is not repeated on every request. <a href="https://pages.nist.gov/800-63-4/sp800-63b.html#sessmgmt">NIST SP 800-63B</a> describes this as session management based on a session secret.</li>
 </ul>
-<h4 id="prevent-data-leakage-and-trusted-field-clobbering">Prevent Data Leakage and Trusted Field Clobbering<a class="headerlink" href="#prevent-data-leakage-and-trusted-field-clobbering" title="Permanent link">&para;</a></h4>
-<p>If there are data members of an object that should never be controlled by end users during deserialization or exposed to users during serialization, they should be declared as <a href="https://docs.oracle.com/javase/7/docs/platform/serialization/spec/serial-arch.html#7231">the <code>transient</code> keyword</a> (section <em>Protecting Sensitive Information</em>).</p>
-<p>For a class that defined as Serializable, the sensitive information variable should be declared as <code>private transient</code>.</p>
-<p>For example, the class <code>myAccount</code>, the variables 'profit' and 'margin' were declared as transient to prevent them from being serialized.</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">myAccount</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">transient</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">profit</span><span class="p">;</span><span class="w"> </span><span class="c1">// declared transient</span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">transient</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">margin</span><span class="p">;</span><span class="w"> </span><span class="c1">// declared transient</span>
-<span class="w">    </span><span class="p">....</span>
-</code></pre></div>
-<h4 id="prevent-deserialization-of-domain-objects">Prevent Deserialization of Domain Objects<a class="headerlink" href="#prevent-deserialization-of-domain-objects" title="Permanent link">&para;</a></h4>
-<p>Some of your application objects may be forced to implement <code>Serializable</code> due to their hierarchy. To guarantee that your application objects can't be deserialized, a <code>readObject()</code> method should be declared (with a <code>final</code> modifier) which always throws an exception:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">readObject</span><span class="p">(</span><span class="n">ObjectInputStream</span><span class="w"> </span><span class="n">in</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">IOException</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">IOException</span><span class="p">(</span><span class="s">"Cannot be deserialized"</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div>
-<h4 id="harden-your-own-javaioobjectinputstream">Harden Your Own java.io.ObjectInputStream<a class="headerlink" href="#harden-your-own-javaioobjectinputstream" title="Permanent link">&para;</a></h4>
-<p>The <code>java.io.ObjectInputStream</code> class is used to deserialize objects. It's possible to harden its behavior by subclassing it. This is the best solution if:</p>
+<p>Where the distinction does not matter, this cheat sheet uses <strong>authentication data</strong> for both. The patterns differ in <strong>what</strong> is verified (credentials or proofs), <strong>where</strong> verification happens, and <strong>which</strong> implications this has for system design and trust boundaries.</p>
+<p>For authorization and for propagating an authenticated identity between services, see the <a href="Microservices_Security_Cheat_Sheet.html">Microservices Security Cheat Sheet</a>, in particular its <a href="Microservices_Security_Cheat_Sheet.html#edge-level-authorization">edge-level</a>, <a href="Microservices_Security_Cheat_Sheet.html#external-entity-identity-propagation">identity propagation</a>, and <a href="Microservices_Security_Cheat_Sheet.html#service-to-service-authentication">service-to-service authentication</a> sections.</p>
+<h2 id="service-level-embedded-authentication">Service-Level Embedded Authentication<a class="headerlink" href="#service-level-embedded-authentication" title="Permanent link">&para;</a></h2>
+<p>In this pattern, each service handles primary authentication itself: it manages identities and credentials, verifies them, and implements the authentication workflows, typically with username/password or API keys. All authentication logic and subject data storage live inside the service, in custom code or built-in libraries. If you have to maintain such a service, the credential handling must follow the <a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">Authentication Cheat Sheet</a> and the <a href="https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html">Password Storage Cheat Sheet</a>.</p>
+<p><img alt="Service-Level Embedded Authentication" src="../assets/Service_Level_Embedded_Authentication.png" /></p>
+<h3 id="pros">Pros<a class="headerlink" href="#pros" title="Permanent link">&para;</a></h3>
 <ul>
-<li>you can change the code that does the deserialization;</li>
-<li>you know what classes you expect to deserialize.</li>
+<li><strong>Simplicity:</strong> Each service is self-contained and needs no external authentication infrastructure.</li>
+<li><strong>Customization freedom:</strong> Authentication behavior can be adapted to service-specific requirements without external constraints.</li>
+<li><strong>Support for external and internal actors:</strong> Because the service controls all authentication functionality, it can orchestrate different authentication contexts (internal services and external users), at the price of significant complexity (see the authentication orchestration con below).</li>
 </ul>
-<p>The general idea is to override <a href="http://docs.oracle.com/javase/7/docs/api/java/io/ObjectInputStream.html#resolveClass(java.io.ObjectStreamClass)"><code>ObjectInputStream.html#resolveClass()</code></a> in order to restrict which classes are allowed to be deserialized.</p>
-<p>Because this call happens before a <code>readObject()</code> is called, you can be sure that no deserialization activity will occur unless the type is one that you allow.</p>
-<p>A simple example is shown here, where the <code>LookAheadObjectInputStream</code> class is guaranteed to <strong>not</strong> deserialize any other type besides the <code>Bicycle</code> class:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LookAheadObjectInputStream</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">ObjectInputStream</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">LookAheadObjectInputStream</span><span class="p">(</span><span class="n">InputStream</span><span class="w"> </span><span class="n">inputStream</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">inputStream</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="cm">/**</span>
-<span class="cm">    * Only deserialize instances of our expected Bicycle class</span>
-<span class="cm">    */</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="nf">resolveClass</span><span class="p">(</span><span class="n">ObjectStreamClass</span><span class="w"> </span><span class="n">desc</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">,</span><span class="w"> </span><span class="n">ClassNotFoundException</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">desc</span><span class="p">.</span><span class="na">getName</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">Bicycle</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getName</span><span class="p">()))</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InvalidClassException</span><span class="p">(</span><span class="s">"Unauthorized deserialization attempt"</span><span class="p">,</span><span class="w"> </span><span class="n">desc</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="kd">super</span><span class="p">.</span><span class="na">resolveClass</span><span class="p">(</span><span class="n">desc</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>More complete implementations of this approach have been proposed by various community members:</p>
+<h3 id="cons">Cons<a class="headerlink" href="#cons" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://github.com/ikkisoft/SerialKiller">NibbleSec</a> - a library that allows creating lists of classes that are allowed to be deserialized</li>
-<li><a href="https://www.ibm.com/developerworks/library/se-lookahead/">IBM</a> - the seminal protection, written years before the most devastating exploitation scenarios were envisioned.</li>
-<li><a href="https://commons.apache.org/proper/commons-io/javadocs/api-2.5/org/apache/commons/io/serialization/ValidatingObjectInputStream.html">Apache Commons IO classes</a></li>
+<li><strong>Inconsistency:</strong> Authentication behavior, credential storage, and flows differ across services, which fragments the system, degrades the user experience, and rules out Single Sign-On (SSO).</li>
+<li><strong>Security risk:</strong> Authentication code is duplicated across services, increasing the risk of vulnerabilities and complicating audits.</li>
+<li><strong>Maintenance burden:</strong> Changing authentication methods (for example, introducing multi-factor authentication (MFA)) requires updates across all affected services.</li>
+<li><strong>Limited scalability:</strong> Each service manages its own identities, which does not scale to service-to-service authentication across a large system.</li>
+<li><strong>Limited observability and governance:</strong> Without centralized monitoring, credential reuse, account compromise, or brute-force attacks against one service remain invisible to the others, hindering coordinated detection and response.</li>
+<li><strong>Authentication orchestration:</strong> Supporting multi-principal subjects (multiple authentication configurations, protocol chaining, and subject-specific variations for contexts such as first- and third-party access, or external clients next to service-to-service calls) adds significant complexity.</li>
+<li><strong>Coupling of external authentication data with internal trust assumptions:</strong> Using the same authentication data for external clients and internal services increases the risk of leakage and unauthorized access. If an internal service is exposed through a misconfiguration, or an attacker gains internal access, the leaked authentication data grants access to sensitive resources.</li>
 </ul>
-<h4 id="harden-all-javaioobjectinputstream-usage-with-an-agent">Harden All java.io.ObjectInputStream Usage with an Agent<a class="headerlink" href="#harden-all-javaioobjectinputstream-usage-with-an-agent" title="Permanent link">&para;</a></h4>
-<p>As mentioned above, the <code>java.io.ObjectInputStream</code> class is used to deserialize objects. It's possible to harden its behavior by subclassing it. However, if you don't own the code or can't wait for a patch, using an agent to weave in hardening to <code>java.io.ObjectInputStream</code> is the best solution.</p>
-<p>Globally changing <code>ObjectInputStream</code> is only safe for block-listing known malicious types, because it's not possible to know for all applications what the expected classes to be deserialized are. Fortunately, there are very few classes needed in the denylist to be safe from all the known attack vectors, today.</p>
-<p>It's inevitable that more "gadget" classes will be discovered that can be abused. However, there is an incredible amount of vulnerable software exposed today, in need of a fix. In some cases, "fixing" the vulnerability may involve re-architecting messaging systems and breaking backwards compatibility as developers move towards not accepting serialized objects.</p>
-<p>To enable these agents, simply add a new JVM parameter:</p>
-<div class="highlight"><pre><span></span><code>-javaagent:name-of-agent.jar
-</code></pre></div>
-<p>Agents taking this approach have been released by various community members:</p>
+<h2 id="service-level-code-mediated-authentication">Service-Level Code-Mediated Authentication<a class="headerlink" href="#service-level-code-mediated-authentication" title="Permanent link">&para;</a></h2>
+<p>This pattern addresses key limitations of <a href="#service-level-embedded-authentication">Service-Level Embedded Authentication</a>: fragmented identity management, duplicated credential stores, and lack of SSO. The service no longer verifies credentials directly. Instead, an external Identity Provider (IdP) authenticates the subject and issues authentication proofs; the service verifies these itself and extracts identity attributes for request processing.</p>
+<p><img alt="Service-Level Code-Mediated Authentication" src="../assets/Service_Level_Code_Mediated_Authentication.png" /></p>
+<h3 id="pros_1">Pros<a class="headerlink" href="#pros_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://github.com/Contrast-Security-OSS/contrast-rO0">rO0 by Contrast Security</a></li>
+<li><strong>SSO support:</strong> Identity and credential lifecycle is consolidated in the IdP, enabling SSO and reducing duplication.</li>
+<li><strong>Lower security risks:</strong> Centralized authentication reduces the attack surface related to credential handling.</li>
+<li><strong>Improved user experience:</strong> Consistent authentication flows and session handling across services.</li>
+<li><strong>Interoperability:</strong> Widely adopted protocols like <a href="https://openid.net/specs/openid-connect-core-1_0.html">OpenID Connect (OIDC)</a> and <a href="https://www.oasis-open.org/standard/saml/">SAML</a> provide flexibility and broad integration possibilities with various IdPs.</li>
+<li><strong>Customization freedom:</strong> Services can still tailor authentication behavior to specific needs, for example where standards like OIDC are not applicable.</li>
+<li><strong>Support for external and internal actors:</strong> As in the <a href="#service-level-embedded-authentication">embedded pattern</a>, with the same orchestration complexity.</li>
 </ul>
-<p>A similar, but less scalable approach would be to manually patch and bootstrap your JVM's ObjectInputStream. Guidance on this approach is available <a href="https://github.com/wsargent/paranoid-java-serialization">here</a>.</p>
-<h4 id="other-deserialization-libraries-and-formats">Other Deserialization Libraries and Formats<a class="headerlink" href="#other-deserialization-libraries-and-formats" title="Permanent link">&para;</a></h4>
-<p>While the advice above is focused on <a href="https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html">Java's Serializable format</a>, there are a number of other libraries
-that use other formats for deserialization. Many of these libraries may have similar security
-issues if not configured correctly. This section lists some of these libraries and
-recommended configuration options to avoid security issues when deserializing untrusted data:</p>
-<p><strong>Can be used safely with default configuration:</strong></p>
-<p>The following libraries can be used safely with default configuration:</p>
+<h3 id="cons_1">Cons<a class="headerlink" href="#cons_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong><a href="https://github.com/alibaba/fastjson2">fastjson2</a></strong> (JSON) - can be used safely as long as
-the <a href="https://github.com/alibaba/fastjson2/wiki/fastjson2_autotype_cn"><strong>autotype</strong></a> option is not turned on</li>
-<li><strong><a href="https://github.com/FasterXML/jackson-databind">jackson-databind</a></strong> (JSON) - can be used safely as long
-as polymorphism is not used (<a href="https://cowtowncoder.medium.com/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062">see blog post</a>)</li>
-<li><strong><a href="https://github.com/EsotericSoftware/kryo">Kryo v5.0.0+</a></strong> (custom format) - can be used safely
-as long as class registration is not turned <strong>off</strong> (<a href="https://github.com/EsotericSoftware/kryo#optional-registration">see documentation</a>
-and <a href="https://github.com/EsotericSoftware/kryo/issues/929">this issue</a>)</li>
-<li><strong><a href="https://github.com/EsotericSoftware/yamlbeans">YamlBeans v1.16+</a></strong> (YAML) - can be used safely
-as long as the <strong>UnsafeYamlConfig</strong> class isn't used (see <a href="https://github.com/EsotericSoftware/yamlbeans/commit/b1122588e7610ae4e0d516c50d08c94ee87946e6">this commit</a>)<ul>
-<li><em>NOTE: because these versions are not available in Maven Central,
-<a href="https://github.com/Contrast-Security-OSS/yamlbeans">a fork exists</a> that can be used instead.</em></li>
+<li><strong>Protocol handling overhead:</strong> Each service must implement and maintain logic for authentication proof verification and protocol-specific behavior.</li>
+<li><strong>Misconfiguration risks:</strong> Incorrect verification logic, such as missing expiration checks or improper use of cryptography, can introduce severe security vulnerabilities.</li>
+<li><strong>Authentication orchestration:</strong> Same complexity as in the <a href="#service-level-embedded-authentication">embedded pattern</a>.</li>
+<li><strong>Coupling of external authentication data with internal trust assumptions:</strong> Same risk as in the <a href="#service-level-embedded-authentication">embedded pattern</a>.</li>
 </ul>
-</li>
-<li><strong><a href="https://x-stream.github.io/">XStream v1.4.17+</a></strong> (JSON and XML) - can be used safely
-as long as the allowlist and other security controls are not relaxed (<a href="https://x-stream.github.io/security.html">see documentation</a>)</li>
-</ul>
-<p><strong>Requires configuration before can be used safely:</strong></p>
-<p>The following libraries require configuration options to be set before they can be used safely:</p>
+<h2 id="service-level-proxy-mediated-authentication">Service-Level Proxy-Mediated Authentication<a class="headerlink" href="#service-level-proxy-mediated-authentication" title="Permanent link">&para;</a></h2>
+<p>This pattern builds on the <a href="#service-level-code-mediated-authentication">previous pattern</a> but moves authentication logic out of the service into a dedicated proxy deployed as a sidecar alongside it. The proxy sits in front of the application, verifies authentication proofs with the Identity Provider (IdP), injects identity context into the request (typically as headers), and forwards it locally to the service.</p>
+<p><img alt="Service-Level Proxy-Mediated Authentication" src="../assets/Service_Level_Proxy_Mediated_Authentication.png" /></p>
+<h3 id="pros_2">Pros<a class="headerlink" href="#pros_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong><a href="https://github.com/alibaba/fastjson">fastjson v1.2.68+</a></strong> (JSON) - cannot be used safely unless
-the <a href="https://github.com/alibaba/fastjson/wiki/fastjson_safemode_en"><strong>safemode</strong></a> option is turned on, which disables
-deserialization of any class (<a href="https://github.com/alibaba/fastjson/wiki/enable_autotype">see documentation</a>).
-Previous versions are not safe.</li>
-<li><strong><a href="https://github.com/jdereg/json-io">json-io</a></strong> (JSON) - cannot be used safely since the use of <strong>@type</strong> property in
-JSON allows deserialization of any class. Can only be used safely in following situations:<ul>
-<li>In <a href="https://github.com/jdereg/json-io/blob/master/user-guide.md#non-typed-usage">non-typed mode</a> using the <strong>JsonReader.USE_MAPS</strong> setting which turns off generic object deserialization</li>
-<li><a href="https://github.com/jdereg/json-io/blob/master/user-guide.md#customization-technique-4-custom-serializer">With a custom deserializer</a> controlling which classes get deserialized</li>
+<li><strong>All benefits of the code-mediated pattern:</strong> SSO, centralized credential handling, a consistent user experience, and standards-based interoperability (see <a href="#service-level-code-mediated-authentication">above</a>).</li>
+<li><strong>Separation of concerns:</strong> Removes authentication logic from application code, simplifying service development and reducing maintenance effort.</li>
+<li><strong>Consistent behavior:</strong> Identity verification and protocol handling in the proxy ensure uniform behavior across services.</li>
+<li><strong>Improved security posture:</strong> Consolidating authentication logic into a dedicated, hardened component reduces the risk of implementation flaws.</li>
+<li><strong>Authentication orchestration:</strong> Some proxies support multiple authentication configurations, including protocol chaining and subject-specific variations, which covers first- and third-party access or a mix of external clients and internal services.</li>
+<li><strong>Strong foundation for service-to-service trust:</strong> Enables <a href="https://csrc.nist.gov/pubs/sp/800/207/final">Zero Trust</a> networking with workload identity, typically realized with <a href="https://spiffe.io/">SPIFFE/SPIRE</a>, which issues workload identities as <a href="https://www.rfc-editor.org/rfc/rfc5280">X.509 certificates</a> used for mutual TLS (<a href="https://www.rfc-editor.org/rfc/rfc8446">mTLS</a>) between services.</li>
 </ul>
-</li>
-<li><strong><a href="https://github.com/EsotericSoftware/kryo">Kryo &lt; v5.0.0</a></strong> (custom format) - cannot be used safely unless class registration is turned <strong>on</strong>,
-which disables deserialization of any class (<a href="https://github.com/EsotericSoftware/kryo#optional-registration">see documentation</a>
-and <a href="https://github.com/EsotericSoftware/kryo/issues/929">this issue</a>)<ul>
-<li><em>NOTE: other wrappers exist around Kryo such as <a href="https://github.com/twitter/chill">Chill</a>, which may also have class registration
-not required by default regardless of the underlying version of Kryo being used</em></li>
-</ul>
-</li>
-<li><strong><a href="https://bitbucket.org/snakeyaml/snakeyaml/src">SnakeYAML</a></strong> (YAML) - cannot be used safely unless
-the <strong>org.yaml.snakeyaml.constructor.SafeConstructor</strong> class is used, which disables
-deserialization of any class (<a href="https://bitbucket.org/snakeyaml/snakeyaml/wiki/CVE-2022-1471">see docs</a>)</li>
-</ul>
-<p><strong>Cannot be used safely:</strong></p>
-<p>The following libraries are either no longer maintained or cannot be used safely with untrusted input:</p>
+<h3 id="cons_2">Cons<a class="headerlink" href="#cons_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong><a href="https://github.com/castor-data-binding/castor">Castor</a></strong> (XML) - appears to be abandoned with no commits since 2016</li>
-<li><strong><a href="https://github.com/alibaba/fastjson">fastjson &lt; v1.2.68</a></strong> (JSON) - these versions allows deserialization of any class
-(<a href="https://github.com/alibaba/fastjson/wiki/enable_autotype">see documentation</a>)</li>
-<li><strong><a href="https://docs.oracle.com/javase/8/docs/api/java/beans/XMLDecoder.html">XMLDecoder in the JDK</a></strong> (XML) - <em>"close to impossible to securely deserialize Java objects in this format from untrusted inputs"</em>
-("Red Hat Defensive Coding Guide", <a href="https://redhat-crypto.gitlab.io/defensive-coding-guide/#sect-Defensive_Coding-Tasks-Serialization-XML">end of section 2.6.5</a>)</li>
-<li><strong><a href="https://x-stream.github.io/">XStream &lt; v1.4.17</a></strong> (JSON and XML) - these versions allows deserialization of any class (see <a href="https://x-stream.github.io/security.html#explicit">documentation</a>)</li>
-<li><strong><a href="https://github.com/EsotericSoftware/yamlbeans">YamlBeans &lt; v1.16</a></strong> (YAML) - these versions allows deserialization of any class
-(see <a href="https://github.com/Contrast-Security-OSS/yamlbeans/blob/main/SECURITY.md">this document</a>)</li>
+<li><strong>Operational complexity:</strong> Requires deploying and maintaining an additional component per microservice, with higher resource usage and cost.</li>
+<li><strong>Header spoofing risk:</strong> The application trusts identity headers set by the sidecar, so any path that lets a caller set those headers yields a forged identity: a client reaching the application port directly, or the proxy forwarding identity headers it received from the caller. Countermeasures: the sidecar must strip or overwrite every inbound identity header before injecting its own (Envoy, for example, <a href="https://www.envoyproxy.io/docs/envoy/latest/configuration/http/http_conn_man/headers#x-forwarded-client-cert">sanitizes <code>x-forwarded-client-cert</code> by default</a>); the application must accept traffic only from its sidecar (bind to loopback, or enforce a network policy that only allows the sidecar to reach the application port); or, where that isolation cannot be guaranteed, the sidecar must sign the injected headers with <a href="https://www.rfc-editor.org/rfc/rfc9421">HTTP Message Signatures</a> so the application can verify their origin. Define a signature profile that binds the identity to the intended service and relevant request components. The application must verify the trusted signer's signature and enforce freshness and replay checks. <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204.pdf">NIST SP 800-204</a> (MS-SS-13) recommends layer 3 network segmentation for sensitive applications precisely to counter callers bypassing the sidecar proxy.</li>
+<li><strong>Configuration consistency:</strong> All proxies across the service landscape must be configured uniformly; inconsistencies lead to confusing user flows or security vulnerabilities.</li>
+<li><strong>Coupling of external authentication data with internal trust assumptions:</strong> Same risk as in the <a href="#service-level-embedded-authentication">embedded pattern</a>, because the external authentication data still travels to every service's sidecar for verification.</li>
 </ul>
-<h3 id="net-csharp">.Net CSharp<a class="headerlink" href="#net-csharp" title="Permanent link">&para;</a></h3>
-<h4 id="clear-box-review_3">Clear-box Review<a class="headerlink" href="#clear-box-review_3" title="Permanent link">&para;</a></h4>
-<p>Search the source code for the following terms:</p>
-<ol>
-<li><code>TypeNameHandling</code></li>
-<li><code>JavaScriptTypeResolver</code></li>
-</ol>
-<p>Look for any serializers where the type is set by a user controlled variable.</p>
-<h4 id="opaque-box-review_2">Opaque-box Review<a class="headerlink" href="#opaque-box-review_2" title="Permanent link">&para;</a></h4>
-<p>Search for the following base64 encoded content that starts with:</p>
-<div class="highlight"><pre><span></span><code>AAEAAAD/////
-</code></pre></div>
-<p>Search for content with the following text:</p>
-<ol>
-<li><code>TypeObject</code></li>
-<li><code>$type:</code></li>
-</ol>
-<h4 id="general-precautions">General Precautions<a class="headerlink" href="#general-precautions" title="Permanent link">&para;</a></h4>
-<p>Microsoft has stated that the <code>BinaryFormatter</code> type is dangerous and cannot be secured. As such, it should not be used. Full details are in the <a href="https://docs.microsoft.com/en-us/dotnet/standard/serialization/binaryformatter-security-guide">BinaryFormatter security guide</a>.</p>
-<p>Don't allow the datastream to define the type of object that the stream will be deserialized to. You can prevent this by for example using the <code>DataContractSerializer</code> or <code>XmlSerializer</code> if at all possible.</p>
-<p>Where <code>JSON.Net</code> is being used make sure the <code>TypeNameHandling</code> is only set to <code>None</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="n">TypeNameHandling</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TypeNameHandling</span><span class="p">.</span><span class="n">None</span>
-</code></pre></div>
-<p>If <code>JavaScriptSerializer</code> is to be used then do not use it with a <code>JavaScriptTypeResolver</code>.</p>
-<p>If you must deserialize data streams that define their own type, then restrict the types that are allowed to be deserialized. One should be aware that this is still risky as many native .Net types potentially dangerous in themselves. e.g.</p>
-<div class="highlight"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="n">IO</span><span class="p">.</span><span class="n">FileInfo</span>
-</code></pre></div>
-<p><code>FileInfo</code> objects that reference files actually on the server can when deserialized, change the properties of those files e.g. to read-only, creating a potential denial of service attack.</p>
-<p>Even if you have limited the types that can be deserialized remember that some types have properties that are risky. <code>System.ComponentModel.DataAnnotations.ValidationException</code>, for example has a property <code>Value</code> of type <code>Object</code>. if this type is the type allowed for deserialization then an attacker can set the <code>Value</code> property to any object type they choose.</p>
-<p>Attackers should be prevented from steering the type that will be instantiated. If this is possible then even <code>DataContractSerializer</code> or <code>XmlSerializer</code> can be subverted e.g.</p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Action below is dangerous if the attacker can change the data in the database</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">typename</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetTransactionTypeFromDatabase</span><span class="p">();</span>
-
-<span class="kt">var</span><span class="w"> </span><span class="n">serializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataContractJsonSerializer</span><span class="p">(</span><span class="n">Type</span><span class="p">.</span><span class="n">GetType</span><span class="p">(</span><span class="n">typename</span><span class="p">));</span>
-
-<span class="kt">var</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">serializer</span><span class="p">.</span><span class="n">ReadObject</span><span class="p">(</span><span class="n">ms</span><span class="p">);</span>
-</code></pre></div>
-<p>Execution can occur within certain .Net types during deserialization. Creating a control such as the one shown below is ineffective.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">var</span><span class="w"> </span><span class="n">suspectObject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myBinaryFormatter</span><span class="p">.</span><span class="n">Deserialize</span><span class="p">(</span><span class="n">untrustedData</span><span class="p">);</span>
-
-<span class="c1">//Check below is too late! Execution may have already occurred.</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">suspectObject</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">SomeDangerousObjectType</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="c1">//generate warnings and dispose of suspectObject</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>For <code>JSON.Net</code> it is possible to create a safer form of allow-list control using a custom <code>SerializationBinder</code>.</p>
-<p>Try to keep up-to-date on known .Net insecure deserialization gadgets and pay special attention where such types can be created by your deserialization processes. <strong>A deserializer can only instantiate types that it knows about</strong>.</p>
-<p>Try to keep any code that might create potential gadgets separate from any code that has internet connectivity. As an example <code>System.Windows.Data.ObjectDataProvider</code> used in WPF applications is a known gadget that allows arbitrary method invocation. It would be risky to have this a reference to this assembly in a REST service project that deserializes untrusted data.</p>
-<h4 id="known-net-rce-gadgets">Known .NET RCE Gadgets<a class="headerlink" href="#known-net-rce-gadgets" title="Permanent link">&para;</a></h4>
+<h2 id="edge-level-authentication">Edge-Level Authentication<a class="headerlink" href="#edge-level-authentication" title="Permanent link">&para;</a></h2>
+<p>In this pattern, authentication is handled at the system boundary by a shared component such as an API gateway or ingress proxy. This component authenticates incoming requests from external clients before they reach internal services. It uses <a href="https://openid.net/specs/openid-connect-core-1_0.html">OIDC</a> or <a href="https://www.oasis-open.org/standard/saml/">SAML</a> with an identity provider for user authentication, validates <a href="https://www.rfc-editor.org/rfc/rfc6749">OAuth 2.0</a> access tokens for API access, or uses <a href="https://www.rfc-editor.org/rfc/rfc8446">mTLS</a> for certificate-based client authentication. It propagates verified identity information, typically via headers, to downstream services.</p>
+<p><img alt="Edge-Level Authentication" src="../assets/Edge_Level_Authentication.png" /></p>
+<p>This consolidates authentication into a single enforcement point and removes per-service authentication handling. It corresponds to the gateway or portal placement of the policy enforcement point described in <a href="https://csrc.nist.gov/pubs/sp/800/207/final">NIST SP 800-207 (Zero Trust Architecture)</a>.</p>
+<h3 id="pros_3">Pros<a class="headerlink" href="#pros_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li><code>System.Configuration.Install.AssemblyInstaller</code></li>
-<li><code>System.Activities.Presentation.WorkflowDesigner</code></li>
-<li><code>System.Windows.ResourceDictionary</code></li>
-<li><code>System.Windows.Data.ObjectDataProvider</code></li>
-<li><code>System.Windows.Forms.BindingSource</code></li>
-<li><code>Microsoft.Exchange.Management.SystemManager.WinForms.ExchangeSettingsProvider</code></li>
-<li><code>System.Data.DataViewManager, System.Xml.XmlDocument/XmlDataDocument</code></li>
-<li><code>System.Management.Automation.PSObject</code></li>
+<li><strong>Improved consistency:</strong> Authentication is performed uniformly at a single entry point, reducing fragmentation and configuration drift and improving auditability.</li>
+<li><strong>Simplified service logic:</strong> Internal services are relieved from implementing authentication and focus on authorization and business functionality.</li>
+<li><strong>Faster service onboarding:</strong> New services rely on the existing infrastructure for authentication and need minimal additional setup.</li>
+<li><strong>Protocol-agnostic identity propagation:</strong> The edge verifies the external authentication data once and propagates identity to internal services in a trusted, implementation-independent format: a newly issued <a href="https://www.rfc-editor.org/rfc/rfc7519">JSON Web Token (JWT)</a>, headers protected with <a href="https://www.rfc-editor.org/rfc/rfc9421">HTTP Message Signatures</a>, or a signed proprietary structure. Unlike the service-level patterns, where every service or its sidecar must receive and verify the external authentication data, internal services only ever see the internal representation.</li>
 </ul>
-<h2 id="language-agnostic-methods-for-deserializing-safely">Language-Agnostic Methods for Deserializing Safely<a class="headerlink" href="#language-agnostic-methods-for-deserializing-safely" title="Permanent link">&para;</a></h2>
-<h3 id="using-alternative-data-formats">Using Alternative Data Formats<a class="headerlink" href="#using-alternative-data-formats" title="Permanent link">&para;</a></h3>
-<p>A great reduction of risk is achieved by avoiding native (de)serialization formats. By switching to a pure data format like JSON or XML, you lessen the chance of custom deserialization logic being repurposed towards malicious ends.</p>
-<p>Many applications rely on a <a href="https://en.wikipedia.org/wiki/Data_transfer_object">data-transfer object pattern</a> that involves creating a separate domain of objects for the explicit purpose data transfer. Of course, it's still possible that the application will make security mistakes after a pure data object is parsed.</p>
-<h3 id="only-deserialize-signed-data">Only Deserialize Signed Data<a class="headerlink" href="#only-deserialize-signed-data" title="Permanent link">&para;</a></h3>
-<p>If the application knows before deserialization which messages will need to be processed, they could sign them as part of the serialization process. The application could then to choose not to deserialize any message which didn't have an authenticated signature.</p>
-<h2 id="mitigation-toolslibraries">Mitigation Tools/Libraries<a class="headerlink" href="#mitigation-toolslibraries" title="Permanent link">&para;</a></h2>
+<h3 id="cons_3">Cons<a class="headerlink" href="#cons_3" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://github.com/ikkisoft/SerialKiller">Java secure deserialization library</a></li>
-<li><a href="https://github.com/cschneider4711/SWAT">SWAT - tool for creating allowlists</a></li>
-<li><a href="https://github.com/kantega/notsoserial">NotSoSerial</a></li>
+<li><strong>Limited granularity:</strong> Fine-grained or per-endpoint authentication policies (for example, step-up authentication) are harder to implement and may require coordination with downstream services, depending on the capabilities of the edge proxy.</li>
+<li><strong>Identity propagation challenges:</strong> Secure and reliable propagation of identity context (for example, via headers) requires strict validation and an explicit trust model between the edge and internal services. Use one of the protected formats above, and make internal services verify the signature and reject requests whose identity context is missing or unsigned.</li>
+<li><strong>Single point of failure:</strong> The ingress proxy or gateway is already a central component in most architectures, but authenticating at the edge makes it a critical part of the security infrastructure. Misconfiguration or compromise affects the integrity of authentication decisions system-wide.</li>
+<li><strong>Not suitable for service-to-service authentication:</strong> Edge-level authentication only covers incoming external requests. Internal service-to-service calls need their own mechanism, and any component that can reach a service directly bypasses the gateway entirely; <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204.pdf">NIST SP 800-204</a> (MS-SS-2) recommends mutual authentication to prevent such direct, anonymous connections. Routing internal traffic through the edge is technically possible but introduces severe performance bottlenecks.</li>
 </ul>
-<h2 id="detection-tools">Detection Tools<a class="headerlink" href="#detection-tools" title="Permanent link">&para;</a></h2>
+<h2 id="network-layer-node-level-authentication">Network-Layer (Node-Level) Authentication<a class="headerlink" href="#network-layer-node-level-authentication" title="Permanent link">&para;</a></h2>
+<p>This pattern authenticates peers at the <a href="https://en.wikipedia.org/wiki/Network_layer">network layer</a> (layer 3), inside the operating system kernel, using cryptographic identities attached to a node or host rather than to an application. Implementations are built on <a href="https://www.rfc-editor.org/rfc/rfc6071">IPsec</a> or <a href="https://www.wireguard.com/">WireGuard</a>: the identity of a peer is bound to keys configured on each node, and every packet is cryptographically authenticated. Enforcement is transparent to applications, which makes it a good complement for securing traffic between workloads, but not a replacement for application-layer authentication.</p>
+<p><img alt="Network-Layer (Node-Level) Authentication" src="../assets/Network_Layer_Authentication.png" /></p>
+<h3 id="pros_4">Pros<a class="headerlink" href="#pros_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet">Java deserialization cheat sheet aimed at pen testers</a></li>
-<li><a href="https://github.com/frohoff/ysoserial">A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.</a></li>
-<li><a href="https://github.com/brianwrf/hackUtils">Java De-serialization toolkits</a></li>
-<li><a href="https://github.com/frohoff/ysoserial">Java de-serialization tool</a></li>
-<li><a href="https://github.com/pwntester/ysoserial.net">.Net payload generator</a></li>
-<li><a href="https://github.com/federicodotta/Java-Deserialization-Scanner/releases">Burp Suite extension</a></li>
-<li><a href="https://github.com/ikkisoft/SerialKiller">Java secure deserialization library</a></li>
-<li><a href="https://github.com/mbechler/serianalyzer">Serianalyzer is a static bytecode analyzer for deserialization</a></li>
-<li><a href="https://github.com/mbechler/marshalsec">Payload generator</a></li>
-<li><a href="https://github.com/modzero/modjoda">Android Java Deserialization Vulnerability Tester</a></li>
-<li>Burp Suite Extension<ul>
-<li><a href="https://github.com/NetSPI/JavaSerialKiller">JavaSerialKiller</a></li>
-<li><a href="https://github.com/federicodotta/Java-Deserialization-Scanner">Java Deserialization Scanner</a></li>
-<li><a href="https://github.com/summitt/burp-ysoserial">Burp-ysoserial</a></li>
-<li><a href="https://github.com/DirectDefense/SuperSerial">SuperSerial</a></li>
-<li><a href="https://github.com/DirectDefense/SuperSerial-Active">SuperSerial-Active</a></li>
+<li><strong>Transparent to applications:</strong> Services need no authentication logic; the kernel enforces peer identity for all traffic.</li>
+<li><strong>Protocol-agnostic:</strong> Applies to all traffic types, not just HTTP.</li>
+<li><strong>Low overhead:</strong> Kernel implementation and lightweight handshakes keep latency low while providing strong isolation between nodes.</li>
+<li><strong>Provides node (host) identity:</strong> Each node holds its own key material and every packet is authenticated, which resists spoofing and replay at the network layer and supports <a href="https://csrc.nist.gov/pubs/sp/800/207/final">Zero Trust</a> segmentation between nodes.</li>
 </ul>
-</li>
-</ul>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<h3 id="cons_4">Cons<a class="headerlink" href="#cons_4" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet">Java-Deserialization-Cheat-Sheet</a></li>
-<li><a href="https://owasp.org/www-community/vulnerabilities/Deserialization_of_untrusted_data">Deserialization of untrusted data</a></li>
-<li><a href="../assets/Deserialization_Cheat_Sheet_GOD16Deserialization.pdf">Java Deserialization Attacks - German OWASP Day 2016</a></li>
-<li><a href="http://www.slideshare.net/frohoff1/appseccali-2015-marshalling-pickles">AppSecCali 2015 - Marshalling Pickles</a></li>
-<li><a href="http://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/#websphere">FoxGlove Security - Vulnerability Announcement</a></li>
-<li><a href="https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet">Java deserialization cheat sheet aimed at pen testers</a></li>
-<li><a href="https://github.com/frohoff/ysoserial">A proof-of-concept tool for generating payloads that exploit unsafe Java object deserialization.</a></li>
-<li><a href="https://github.com/brianwrf/hackUtils">Java De-serialization toolkits</a></li>
-<li><a href="https://github.com/frohoff/ysoserial">Java de-serialization tool</a></li>
-<li><a href="https://github.com/federicodotta/Java-Deserialization-Scanner/releases">Burp Suite extension</a></li>
-<li><a href="https://github.com/ikkisoft/SerialKiller">Java secure deserialization library</a></li>
-<li><a href="https://github.com/mbechler/serianalyzer">Serianalyzer is a static bytecode analyzer for deserialization</a></li>
-<li><a href="https://github.com/mbechler/marshalsec">Payload generator</a></li>
-<li><a href="https://github.com/modzero/modjoda">Android Java Deserialization Vulnerability Tester</a></li>
-<li>Burp Suite Extension<ul>
-<li><a href="https://github.com/NetSPI/JavaSerialKiller">JavaSerialKiller</a></li>
-<li><a href="https://github.com/federicodotta/Java-Deserialization-Scanner">Java Deserialization Scanner</a></li>
-<li><a href="https://github.com/summitt/burp-ysoserial">Burp-ysoserial</a></li>
-<li><a href="https://github.com/DirectDefense/SuperSerial">SuperSerial</a></li>
-<li><a href="https://github.com/DirectDefense/SuperSerial-Active">SuperSerial-Active</a></li>
+<li><strong>Not suitable for application-level (layer 7) authentication:</strong> Identities belong to nodes or hosts, not to individual users, external clients, or, usually, individual workloads. Every workload on a node shares the node's identity, and user-specific attributes cannot be conveyed.</li>
+<li><strong>Limited observability:</strong> Monitoring is confined to connection-level data (source and destination nodes), with no insight into user-driven actions inside the application.</li>
+<li><strong>Infrastructure complexity:</strong> Requires robust automation for key and identity management and OS- or kernel-level policy enforcement (for example, via <a href="https://ebpf.io/">eBPF</a>).</li>
 </ul>
-</li>
-<li>.Net<ul>
-<li><a href="https://www.youtube.com/watch?v=qDoBlLwREYk">Alvaro Muñoz: .NET Serialization: Detecting and defending vulnerable endpoints</a></li>
-<li><a href="https://www.youtube.com/watch?v=Xfbu-pQ1tIc">James Forshaw - Black Hat USA 2012 - Are You My Type? Breaking .net Sandboxes Through Serialization</a></li>
-<li><a href="https://www.youtube.com/watch?v=oxlD8VWWHE8">Jonathan Birch BlueHat v17 - Dangerous Contents - Securing .Net Deserialization</a></li>
-<li><a href="https://www.youtube.com/watch?v=NqHsaVhlxAQ">Alvaro Muñoz &amp; Oleksandr Mirosh - Friday the 13th: Attacking JSON - AppSecUSA 2017</a></li>
-</ul>
-</li>
-<li>Python<ul>
-<li><a href="https://macrosec.tech/index.php/2021/06/29/exploiting-insecuredeserialization-bugs-found-in-the-wild-python-pickles.">Exploiting Insecure Deserialization bugs found in the Wild (Python Pickles)</a></li>
-</ul>
-</li>
+<h2 id="operational-and-security-considerations">Operational and Security Considerations<a class="headerlink" href="#operational-and-security-considerations" title="Permanent link">&para;</a></h2>
+<p>The patterns differ primarily in <em>where</em> and <em>how</em> authentication is performed, but they also have significant implications for operations and authorization. Choosing a pattern comes down to balancing development flexibility, operational effort, and risk tolerance.</p>
+<h3 id="operational-considerations">Operational Considerations<a class="headerlink" href="#operational-considerations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Configuration &amp; Implementation Burden</th>
+<th>Operational Overhead</th>
+<th>Observability Scope</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Service-Level Embedded</strong></td>
+<td>High</td>
+<td>High</td>
+<td>Application-specific</td>
+</tr>
+<tr>
+<td><strong>Service-Level Code-Mediated</strong></td>
+<td>Medium</td>
+<td>Medium</td>
+<td>IdP + Application-specific</td>
+</tr>
+<tr>
+<td><strong>Service-Level Proxy-Mediated</strong></td>
+<td>Medium</td>
+<td>High (infra cost)</td>
+<td>Proxy + Application</td>
+</tr>
+<tr>
+<td><strong>Edge-Level</strong></td>
+<td>Low</td>
+<td>Low</td>
+<td>Centralized (Proxy)</td>
+</tr>
+<tr>
+<td><strong>Network-Layer (Node-Level)</strong></td>
+<td>Low-Medium</td>
+<td>High (infra complexity)</td>
+<td>Network-level only</td>
+</tr>
+</tbody>
+</table>
+<p>Patterns with decentralized authentication (like <a href="#service-level-embedded-authentication">Service-Level Embedded Authentication</a>) typically incur more operational overhead due to inconsistencies, duplicated configuration, and monitoring complexity. Centralized patterns reduce duplication but introduce infrastructure dependencies and require resilient design.</p>
+<h3 id="security-considerations">Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h3>
+<p>Security risks increase significantly when authentication logic and credentials are handled directly within application code. Centralized enforcement, whether at the IdP, at the edge, or in the kernel, limits exposure, enforces stronger boundaries, and reduces the risk of misconfiguration. However, trust leakage must be prevented, because it directly undermines the principle of least privilege. This depends not only on where authentication occurs, but also on how identity information is propagated and verified downstream. Without trustworthy, tamper-resistant propagation, even strong initial authentication can be undermined, weakening trust boundaries and the system's ability to make reliable authorization decisions. The <a href="Microservices_Security_Cheat_Sheet.html#external-entity-identity-propagation">Microservices Security Cheat Sheet</a> compares the common identity propagation strategies and recommends an internal identity representation signed by a trusted issuer.</p>
+<p><strong>Note:</strong> Token theft, replay protection, session lifecycle, and reauthentication are critical when implementing any of these patterns. They are covered in the <a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">Authentication Cheat Sheet</a> and the <a href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html">Session Management Cheat Sheet</a>.</p>
+<h2 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Authenticate external actors at the edge.</strong> Terminate external authentication in a gateway or ingress proxy, issue a signed internal identity representation, and never forward raw external authentication data to internal services. This is the gateway placement of the policy enforcement point in <a href="https://csrc.nist.gov/pubs/sp/800/207/final">NIST SP 800-207</a>, and the centralized enforcement at the API gateway described in <a href="https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-204.pdf">NIST SP 800-204</a> (MS-SS-2).</li>
+<li><strong>Authenticate internal service calls with proxy-mediated mTLS and workload identity.</strong> Give every workload its own cryptographic identity, for example an X.509 SVID issued through <a href="https://spiffe.io/docs/latest/spiffe-about/overview/">SPIFFE</a>, and have the sidecar enforce mutual authentication with <a href="https://www.rfc-editor.org/rfc/rfc8446">TLS</a> client certificates on every service-to-service connection, as NIST SP 800-204 (MS-SS-4) recommends. See also <a href="Transport_Layer_Security_Cheat_Sheet.html#client-certificates-and-mutual-tls">Client Certificates and Mutual TLS</a>.</li>
+<li><strong>Do not embed authentication in new systems.</strong> Service-level embedded authentication fragments identity, duplicates credential stores, and rules out SSO. Reserve it for legacy code you cannot change, and even then follow the <a href="Authentication_Cheat_Sheet.html">Authentication Cheat Sheet</a>.</li>
+<li><strong>Treat network-layer (node-level) authentication as a transport complement, never as the sole control.</strong> It authenticates nodes, not users or workloads, and <a href="https://csrc.nist.gov/pubs/sp/800/207/final">NIST SP 800-207</a> is explicit that network location alone does not imply trust. Combine it with edge-level or proxy-mediated authentication; NIST SP 800-204 (MS-SS-13) likewise positions layer 3 segmentation as a complement to service mesh controls.</li>
 </ul>
 
 
