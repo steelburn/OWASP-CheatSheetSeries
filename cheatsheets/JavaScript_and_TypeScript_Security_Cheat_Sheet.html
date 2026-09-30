@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/NoSQL_Security_Cheat_Sheet.html">
+        <link rel="canonical" href="https://cheatsheetseries.owasp.org/cheatsheets/JavaScript_and_TypeScript_Security_Cheat_Sheet.html">
       
       
-        <link rel="prev" href="Nextjs_Security_Cheat_Sheet.html">
+        <link rel="prev" href="JSON_Web_Token_Cheat_Sheet.html">
       
       
-        <link rel="next" href="NodeJS_Docker_Cheat_Sheet.html">
+        <link rel="next" href="Java_Security_Cheat_Sheet.html">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>NoSQL Security - OWASP Cheat Sheet Series</title>
+        <title>JavaScript and TypeScript Security - OWASP Cheat Sheet Series</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nosql-security-cheat-sheet" class="md-skip">
+        <a href="#javascript-and-typescript-security-cheat-sheet" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              NoSQL Security
+              JavaScript and TypeScript Security
             
           </span>
         </div>
@@ -1955,10 +1955,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="JavaScript_and_TypeScript_Security_Cheat_Sheet.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript and TypeScript Security
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="JavaScript_and_TypeScript_Security_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1974,6 +2001,164 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related-cheat-sheets-top-level-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Related Cheat Sheets (Top-Level Links)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dangerous-language-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dangerous Language Surface
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dangerous Language Surface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eval-function-and-with" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eval, Function, and with
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evil-regex-redos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evil Regex (ReDoS)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#strict-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Strict Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#object-and-property-safety-including-prototype-pollution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object and Property Safety (Including Prototype Pollution)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dom-sinks-and-output-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DOM Sinks and Output Context
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#async-error-handling-messaging-and-origin-checks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Async Error Handling, Messaging, and Origin Checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typescript-specific-caveats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TypeScript-Specific Caveats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linting-and-dependency-tooling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linting and Dependency Tooling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2515,37 +2700,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    NoSQL Security
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="NoSQL_Security_Cheat_Sheet.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="NoSQL_Security_Cheat_Sheet.html" class="md-nav__link">
         
   
   
@@ -2561,225 +2719,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Introduction
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#threats-common-failure-modes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Threats &amp; Common Failure Modes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#secure-by-design-principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Secure-by-Design Principles
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#practical-defenses-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Practical Defenses &amp; Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Practical Defenses &amp; Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#prevent-nosql-injection" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prevent NoSQL Injection
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#use-secure-driver-odm-patterns" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Use Secure Driver / ODM Patterns
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Use Secure Driver / ODM Patterns">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-pymongo-safe-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example — PyMongo safe usage
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#authentication-authorization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Authentication &amp; Authorization
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#network-transport-security" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Network &amp; Transport Security
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration-hardening" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration Hardening
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secrets-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Secrets Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#logging-monitoring-auditing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Logging, Monitoring &amp; Auditing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#backups-snapshots" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Backups &amp; Snapshots
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quick-nosql-security-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Quick NoSQL Security Checklist
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dos-and-donts" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Do’s and Don’ts
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples-of-dangerous-patterns-brief" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Examples of Dangerous Patterns (brief)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        References
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -4286,10 +4225,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#threats-common-failure-modes" class="md-nav__link">
+  <a href="#related-cheat-sheets-top-level-links" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Threats &amp; Common Failure Modes
+        Related Cheat Sheets (Top-Level Links)
       
     </span>
   </a>
@@ -4297,33 +4236,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#secure-by-design-principles" class="md-nav__link">
+  <a href="#dangerous-language-surface" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Secure-by-Design Principles
+        Dangerous Language Surface
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#practical-defenses-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Practical Defenses &amp; Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Practical Defenses &amp; Examples">
+    <nav class="md-nav" aria-label="Dangerous Language Surface">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prevent-nosql-injection" class="md-nav__link">
+  <a href="#eval-function-and-with" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Prevent NoSQL Injection
+        eval, Function, and with
       
     </span>
   </a>
@@ -4331,38 +4259,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#use-secure-driver-odm-patterns" class="md-nav__link">
+  <a href="#evil-regex-redos" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Use Secure Driver / ODM Patterns
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Use Secure Driver / ODM Patterns">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-pymongo-safe-usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example — PyMongo safe usage
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#authentication-authorization" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Authentication &amp; Authorization
+        Evil Regex (ReDoS)
       
     </span>
   </a>
@@ -4370,54 +4270,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#network-transport-security" class="md-nav__link">
+  <a href="#strict-mode" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Network &amp; Transport Security
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuration-hardening" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configuration Hardening
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secrets-management" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Secrets Management
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#logging-monitoring-auditing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Logging, Monitoring &amp; Auditing
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#backups-snapshots" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Backups &amp; Snapshots
+        Strict Mode
       
     </span>
   </a>
@@ -4430,10 +4286,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#quick-nosql-security-checklist" class="md-nav__link">
+  <a href="#object-and-property-safety-including-prototype-pollution" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Quick NoSQL Security Checklist
+        Object and Property Safety (Including Prototype Pollution)
       
     </span>
   </a>
@@ -4441,10 +4297,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#dos-and-donts" class="md-nav__link">
+  <a href="#dom-sinks-and-output-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Do’s and Don’ts
+        DOM Sinks and Output Context
       
     </span>
   </a>
@@ -4452,10 +4308,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#examples-of-dangerous-patterns-brief" class="md-nav__link">
+  <a href="#async-error-handling-messaging-and-origin-checks" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Examples of Dangerous Patterns (brief)
+        Async Error Handling, Messaging, and Origin Checks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#typescript-specific-caveats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TypeScript-Specific Caveats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linting-and-dependency-tooling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linting and Dependency Tooling
       
     </span>
   </a>
@@ -4493,151 +4371,85 @@
   
 
 
-<h1 id="nosql-security-cheat-sheet">NoSQL Security Cheat Sheet<a class="headerlink" href="#nosql-security-cheat-sheet" title="Permanent link">&para;</a></h1>
+<h1 id="javascript-and-typescript-security-cheat-sheet">JavaScript and TypeScript Security Cheat Sheet<a class="headerlink" href="#javascript-and-typescript-security-cheat-sheet" title="Permanent link">&para;</a></h1>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>NoSQL databases (MongoDB, CouchDB, Cassandra etc.) power many modern applications with flexible schemas and horizontal scale. But their different query models and deployment patterns create <strong>more security risks</strong> compared with relational databases.
-This cheat sheet summarizes guidance to reduce risk when using NoSQL systems.</p>
-<h2 id="threats-common-failure-modes">Threats &amp; Common Failure Modes<a class="headerlink" href="#threats-common-failure-modes" title="Permanent link">&para;</a></h2>
+<p>This cheat sheet lists secure development practices for JavaScript and TypeScript that apply everywhere the language runs: browsers, hybrid apps, server-side Node.js, and any other runtime that implements the language (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">MDN JavaScript</a>). It covers language-level pitfalls (dynamic code execution, prototype pollution, regular expressions), client-side sinks, and TypeScript-specific false confidence. Rules that are equally valid on the client and the server are stated once here; backend and runtime hardening stays in the <a href="Nodejs_Security_Cheat_Sheet.html">Node.js Security Cheat Sheet</a>, which this sheet links to instead of duplicating.</p>
+<h2 id="related-cheat-sheets-top-level-links">Related Cheat Sheets (Top-Level Links)<a class="headerlink" href="#related-cheat-sheets-top-level-links" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>NoSQL Injection</strong> — Unsafe construction of query objects or query strings from untrusted input.</li>
-<li><strong>Exposed Management Interfaces</strong> — Admin GUIs, database ports or REST endpoints exposed to the internet.</li>
-<li><strong>Weak/No Authentication &amp; Authorization</strong> — Default open access or excessive privileges for clients.</li>
-<li><strong>Insecure Network Exposure</strong> — No TLS, open ports, insufficient network segmentation.</li>
-<li><strong>Insecure Defaults</strong> — Default admin accounts, default passwords, unsecured configs.</li>
-<li><strong>Poor Access Control Models</strong> — Coarse roles allowing lateral abuse.</li>
-<li><strong>Insecure Serialization / Deserialization</strong> — Remote code execution via unsafe object deserialization.</li>
-<li><strong>Misconfigured CORS / Public APIs</strong> — APIs accidentally allow cross-origin requests or wide access.</li>
-<li><strong>Credential &amp; Secret Leaks</strong> — Hardcoded DB credentials in code, images, CI logs.</li>
-<li><strong>Unsafe Backup Exposure</strong> — Backups left unencrypted or publicly accessible.</li>
-<li><strong>Supply-chain / Dependency Risks</strong> — Vulnerable drivers, ORMs/ODMs, or plugins.</li>
+<li><a href="Nodejs_Security_Cheat_Sheet.html">Node.js Security Cheat Sheet</a> - backend and runtime guidance.</li>
+<li><a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html">Cross Site Scripting Prevention Cheat Sheet</a> - output encoding rules per context.</li>
+<li><a href="DOM_based_XSS_Prevention_Cheat_Sheet.html">DOM based XSS Prevention Cheat Sheet</a> - client-side XSS sinks and sources.</li>
+<li><a href="Third_Party_Javascript_Management_Cheat_Sheet.html">Third Party JavaScript Management Cheat Sheet</a> - managing external scripts.</li>
+<li><a href="Transport_Layer_Security_Cheat_Sheet.html">Transport Layer Security Cheat Sheet</a> - TLS configuration.</li>
+<li><a href="https://cheatsheetseries.owasp.org/">OWASP Cheat Sheet Series index</a> - start here for the full catalog.</li>
 </ul>
-<h2 id="secure-by-design-principles">Secure-by-Design Principles<a class="headerlink" href="#secure-by-design-principles" title="Permanent link">&para;</a></h2>
+<h2 id="dangerous-language-surface">Dangerous Language Surface<a class="headerlink" href="#dangerous-language-surface" title="Permanent link">&para;</a></h2>
+<h3 id="eval-function-and-with"><code>eval</code>, <code>Function</code>, and <code>with</code><a class="headerlink" href="#eval-function-and-with" title="Permanent link">&para;</a></h3>
+<p>Never build code from strings. <code>eval</code> and <code>new Function</code> execute arbitrary code with the current runtime's privileges, so any attacker-influenced input reaching them is code injection (<a href="https://cwe.mitre.org/data/definitions/94.html">CWE-94</a>). In browsers, <code>setTimeout</code> and <code>setInterval</code> with a string argument compile it the same way through implied <code>eval</code>.</p>
 <ul>
-<li><strong>Treat all input as untrusted</strong> — validate, sanitize, and normalize.</li>
-<li><strong>Use least privilege</strong> — narrow roles for users, services, and operators.</li>
-<li><strong>Defense in depth</strong> — combine network controls, auth, input validation, and monitoring.</li>
-<li><strong>Secure defaults</strong> — change default ports/accounts, enable auth and TLS by default.</li>
-<li><strong>Automate secrets &amp; rotation</strong> — vaults and short-lived credentials.</li>
-<li><strong>Monitor &amp; audit</strong> — log access and detect anomalies.</li>
+<li>Parse data with <code>JSON.parse</code>, never <code>eval</code>.</li>
+<li>Replace dynamic dispatch with static maps of functions instead of constructing calls from names.</li>
+<li>Do not use the <code>with</code> statement. It makes scope unpredictable, is forbidden in strict mode, and blocks engine optimizations.</li>
+<li>Enforce this statically with the <code>no-eval</code>, <code>no-implied-eval</code>, and <code>no-new-func</code> lint rules.</li>
+<li>In browsers, block string compilation with an enforced Content Security Policy whose <code>script-src</code> directive, or <code>default-src</code> fallback, omits both <code>'unsafe-eval'</code> and <code>'trusted-types-eval'</code>. A report-only policy does not block execution (<a href="https://w3c.github.io/webappsec-csp/#can-compile-strings">CSP <code>EnsureCSPDoesNotBlockStringCompilation</code></a>).</li>
+<li>CSP is a browser-side control and does not apply to server-side runtimes, so the lint rules remain the primary enforcement everywhere.</li>
 </ul>
-<h2 id="practical-defenses-examples">Practical Defenses &amp; Examples<a class="headerlink" href="#practical-defenses-examples" title="Permanent link">&para;</a></h2>
-<h3 id="prevent-nosql-injection">Prevent NoSQL Injection<a class="headerlink" href="#prevent-nosql-injection" title="Permanent link">&para;</a></h3>
-<p><strong>Unsafe (string-based filter building — Node.js / MongoDB):</strong></p>
-<div class="highlight"><pre><span></span><code><span class="c1">// DANGEROUS: building query from untrusted input</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"{ name: '"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"' }"</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">eval</span><span class="p">(</span><span class="s2">"("</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">q</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">")"</span><span class="p">);</span><span class="w"> </span><span class="c1">// NEVER do this</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">'users'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="nx">filter</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Safe (use driver query objects / parameterization):</strong></p>
-<div class="highlight"><pre><span></span><code><span class="c1">// SAFE: let driver handle query structure</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="nx">req</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="p">};</span>
-<span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">'users'</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="nx">filter</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Safe (whitelisting for operators):</strong></p>
-<div class="highlight"><pre><span></span><code><span class="c1">// Reject operator injection by disallowing $ in keys or operator values</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">includes</span><span class="p">(</span><span class="s1">'"$'</span><span class="p">))</span><span class="w"> </span><span class="k">throw</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">"Invalid input"</span><span class="p">);</span>
-</code></pre></div>
-<p>Notes:</p>
+<h3 id="evil-regex-redos">Evil Regex (ReDoS)<a class="headerlink" href="#evil-regex-redos" title="Permanent link">&para;</a></h3>
+<p>Nested quantifiers such as <code>(a+)+</code>, and repeated ambiguous alternatives such as <code>^(a|aa)*$</code>, can make matching take exponential time on crafted input, consuming CPU and potentially blocking the executing thread or event loop (<a href="https://cwe.mitre.org/data/definitions/1333.html">CWE-1333</a>). Whether a pattern is actually exploitable depends on the surrounding expression and the failing input, not just the quantified group.</p>
 <ul>
-<li>Do <strong>not</strong> accept raw JSON fragments from the client to execute as queries.</li>
-<li>Disallow client-controlled query operators (like <code>$where</code>, <code>$regex</code>, or <code>$expr</code>) unless strictly required and validated.</li>
-<li>For text-based search parameters, use safe driver APIs (e.g., <code>$text</code> with controlled input).</li>
+<li>Prefer well-tested validators over hand-written patterns for emails, URLs, and similar inputs.</li>
+<li>Keep patterns linear: avoid nested quantifiers and ambiguous alternation over the same characters.</li>
+<li>Cap untrusted input length before matching, and reject rather than sanitize when input does not match.</li>
+<li>For the attack mechanics and detection tooling, see the <a href="https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS">OWASP ReDoS guidance</a>; use linear-time patterns as the primary control and input-length caps as defense in depth.</li>
 </ul>
-<h3 id="use-secure-driver-odm-patterns">Use Secure Driver / ODM Patterns<a class="headerlink" href="#use-secure-driver-odm-patterns" title="Permanent link">&para;</a></h3>
+<h3 id="strict-mode">Strict Mode<a class="headerlink" href="#strict-mode" title="Permanent link">&para;</a></h3>
+<p>Ship ES modules (strict by default) or declare <code>'use strict'</code>. Strict mode turns silent mistakes into errors: assignment to undeclared variables throws, <code>this</code> stays <code>undefined</code> in plain functions instead of becoming the global object, and <code>with</code> is rejected. It does not fix injection, XSS, or prototype pollution; treat it as hygiene, not a security boundary.</p>
+<h2 id="object-and-property-safety-including-prototype-pollution">Object and Property Safety (Including Prototype Pollution)<a class="headerlink" href="#object-and-property-safety-including-prototype-pollution" title="Permanent link">&para;</a></h2>
+<p>Prototype pollution (<a href="https://cwe.mitre.org/data/definitions/1321.html">CWE-1321</a>) occurs when attacker-controlled keys such as <code>__proto__</code>, <code>constructor</code>, or <code>prototype</code> reach a recursive merge or path setter and modify an object's prototype. This can alter the behavior of objects that inherit from that prototype. These are the JavaScript-specific essentials only; the full protection guidance lives in the dedicated <a href="Prototype_Pollution_Prevention_Cheat_Sheet.html">Prototype Pollution Prevention Cheat Sheet</a>.</p>
 <ul>
-<li>Prefer high-level APIs (ODM/ORM) that build queries safely (e.g., Mongoose, Spring Data, Datastax driver patterns).</li>
-<li>Avoid <code>.eval()</code>-like functionality and raw query execution from untrusted data.</li>
-<li>Sanitize and validate any raw expressions before passing to the DB.</li>
+<li>Never pass untrusted input to a recursive merge or <code>set-by-path</code> helper, and reject the key segments <code>__proto__</code>, <code>constructor</code>, and <code>prototype</code> before writing.</li>
+<li>Use a <code>Map</code> with <code>set</code>, <code>get</code>, and <code>has</code> for untrusted dictionary keys, keeping entries separate from object properties (<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Attacks/Prototype_pollution#use_map_and_set_instead">MDN prototype pollution defenses</a>). If an object is required, create it with <code>Object.create(null)</code> so it has no prototype.</li>
+<li>Validate parsed or copied untrusted data against a schema before use, and drop <code>__proto__</code> keys first: <code>Object.assign</code> applies them through the prototype setter and mutates the target's prototype, while spread creates a silent own property.</li>
 </ul>
-<h4 id="example-pymongo-safe-usage">Example — PyMongo safe usage<a class="headerlink" href="#example-pymongo-safe-usage" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pymongo</span><span class="w"> </span><span class="kn">import</span> <span class="n">MongoClient</span>
-<span class="n">client</span> <span class="o">=</span> <span class="n">MongoClient</span><span class="p">(</span><span class="n">uri</span><span class="p">,</span> <span class="n">tls</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">collection</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">mydb</span><span class="o">.</span><span class="n">users</span>
-<span class="n">user</span> <span class="o">=</span> <span class="n">collection</span><span class="o">.</span><span class="n">find_one</span><span class="p">({</span><span class="s2">"email"</span><span class="p">:</span> <span class="n">email_input</span><span class="p">})</span>
-</code></pre></div>
-<h3 id="authentication-authorization">Authentication &amp; Authorization<a class="headerlink" href="#authentication-authorization" title="Permanent link">&para;</a></h3>
+<h2 id="dom-sinks-and-output-context">DOM Sinks and Output Context<a class="headerlink" href="#dom-sinks-and-output-context" title="Permanent link">&para;</a></h2>
+<p>Injecting attacker-controlled strings into HTML, script, or URL contexts is cross-site scripting (<a href="https://cwe.mitre.org/data/definitions/79.html">CWE-79</a>). Follow the <a href="Cross_Site_Scripting_Prevention_Cheat_Sheet.html">Cross Site Scripting Prevention Cheat Sheet</a> for per-context encoding and the <a href="DOM_based_XSS_Prevention_Cheat_Sheet.html">DOM based XSS Prevention Cheat Sheet</a> for client-side sources and sinks.</p>
 <ul>
-<li><strong>Enable authentication</strong> (do not run databases unauthenticated).</li>
-<li>Use <strong>role-based access control (RBAC)</strong>, least privilege for service accounts.</li>
-<li>Use <strong>separate users</strong> for admin/backup/readonly/application.</li>
-<li>Use identity federation or short-lived credentials when supported (e.g., AWS IAM -&gt; DynamoDB).</li>
+<li>Build DOM with <code>textContent</code> and <code>createElement</code> instead of <code>innerHTML</code> or <code>insertAdjacentHTML</code>.</li>
+<li>When HTML must be rendered, sanitize with a maintained allowlist sanitizer and enforce <a href="https://w3c.github.io/trusted-types/dist/spec/">Trusted Types</a> with no permissive default policy.</li>
+<li>Framework auto-escaping has explicit bypasses that must never receive untrusted input: React <code>dangerouslySetInnerHTML</code>, Vue <code>v-html</code>, and Angular <code>bypassSecurityTrustHtml</code> and its siblings.</li>
 </ul>
-<p>For more information please check following cheat sheets:</p>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">Authentication Cheat Sheet</a></p>
-<p><a href="https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html">Authorization Cheat Sheet</a></p>
-<h3 id="network-transport-security">Network &amp; Transport Security<a class="headerlink" href="#network-transport-security" title="Permanent link">&para;</a></h3>
+<h2 id="async-error-handling-messaging-and-origin-checks">Async Error Handling, Messaging, and Origin Checks<a class="headerlink" href="#async-error-handling-messaging-and-origin-checks" title="Permanent link">&para;</a></h2>
+<p>Not every promise failure is a defect. An <em>expected</em> failure is part of a function's contract, such as a lookup that returns <code>null</code> for a missing key or a parse that throws on malformed input; handle it where the caller decides what to do, with a <code>try</code>/<code>catch</code> around <code>await</code> or a <code>.catch</code> on the terminal link of the chain, and return a typed result or a documented error. An <em>unhandled</em> rejection is a promise that rejects with no handler attached, so the failure propagates past the call site and is usually a bug: browsers report it in the console and fire an <code>unhandledrejection</code> event, while Node.js behavior depends on its unhandled-rejection mode and may terminate the process (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises#promise_rejection_events">MDN promise rejection events</a>). Keep promise chains flat with a terminal error handler so genuinely unexpected rejections stay visible, and do not silence them with an empty <code>catch</code>. Server-side specifics live in the <a href="Nodejs_Security_Cheat_Sheet.html">Node.js Security Cheat Sheet</a> and are not repeated here.</p>
+<p>For <code>postMessage</code>, the receiver must verify <code>event.origin</code> against an explicit allowlist, check <code>event.source</code> when a conversation partner is expected, and validate <code>event.data</code> against the expected schema before acting on it. The sender must pass an exact <code>targetOrigin</code>, never <code>"*"</code> for sensitive data (<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">MDN postMessage</a>). Prefer narrow <code>MessageChannel</code> ports over broadcast messaging where the design allows it.</p>
+<h2 id="typescript-specific-caveats">TypeScript-Specific Caveats<a class="headerlink" href="#typescript-specific-caveats" title="Permanent link">&para;</a></h2>
+<p>Types are erased at runtime, so TypeScript alone enforces nothing against a malicious or malformed caller.</p>
 <ul>
-<li><strong>Bind services to internal interfaces</strong>, not <code>0.0.0.0</code>.</li>
-<li>Use <strong>network segmentation / private subnets</strong> and security groups.</li>
-<li><strong>Enforce TLS</strong> (in transit encryption) for driver connections and admin consoles.</li>
-<li>Turn off remote management or restrict it to admin networks/VPNs.</li>
+<li>Treat <code>any</code> as a hole in every check. <code>unknown</code> is the safe default for values of unknown type, because it forces you to narrow before use, whereas <code>any</code> disables type checking for that value (<a href="https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown">TypeScript Handbook: <code>unknown</code></a>).</li>
+<li>Type assertions (<code>as</code>) and non-null assertions (<code>!</code>) silence the compiler without changing runtime values; do not use them on untrusted data.</li>
+<li>Enable <code>strict</code> in <code>tsconfig.json</code> (plus <code>noUncheckedIndexedAccess</code> where affordable) to catch accidental unsafety in your own code. It is a code-quality control, not a trust boundary.</li>
+<li>Validate at every trust boundary (network responses, <code>postMessage</code> payloads, storage reads) with a runtime schema validator. The validated type should flow from the schema, not from a parallel hand-written interface.</li>
 </ul>
-<h3 id="configuration-hardening">Configuration Hardening<a class="headerlink" href="#configuration-hardening" title="Permanent link">&para;</a></h3>
+<h2 id="linting-and-dependency-tooling">Linting and Dependency Tooling<a class="headerlink" href="#linting-and-dependency-tooling" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Change default ports and disable sample/demo users.</li>
-<li>Turn off or restrict features that execute code on the server (e.g., MongoDB <code>db.eval</code>, server-side scripting).</li>
-<li>Require TLS for internal replication links where supported.</li>
-</ul>
-<h3 id="secrets-management">Secrets Management<a class="headerlink" href="#secrets-management" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Do <strong>not</strong> hardcode DB credentials — use a secret manager (Vault, AWS Secrets Manager, Azure Key Vault).</li>
-<li>Avoid baking credentials into container images or environment variables in CI logs.</li>
-<li>Rotate credentials regularly and use ephemeral tokens when possible.</li>
-</ul>
-<h3 id="logging-monitoring-auditing">Logging, Monitoring &amp; Auditing<a class="headerlink" href="#logging-monitoring-auditing" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Enable audit logging (connection attempts, admin actions, failed auth).</li>
-<li>Send logs to a tamper-evident SIEM.</li>
-<li>Alert on anomalous patterns (spike in queries, slow queries, large data exports).</li>
-<li>Monitor for suspicious commands (e.g., admin actions, <code>$where</code>, map-reduce jobs).</li>
-</ul>
-<h3 id="backups-snapshots">Backups &amp; Snapshots<a class="headerlink" href="#backups-snapshots" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Encrypt backups at rest and during transfer.</li>
-<li>Restrict access to backup storage.</li>
-<li>Sanitize backups for PII as required by policy.</li>
-<li>Validate restore procedures regularly.</li>
-</ul>
-<h2 id="quick-nosql-security-checklist">Quick NoSQL Security Checklist<a class="headerlink" href="#quick-nosql-security-checklist" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Enable authentication &amp; RBAC</li>
-<li>Enforce TLS for client and node communication</li>
-<li>Bind DB to internal IPs / use private networks</li>
-<li>Use least privilege service accounts</li>
-<li>Disallow client-controlled query operators unless validated</li>
-<li>Avoid raw query execution / eval on server</li>
-<li>Store credentials in secret manager &amp; rotate them</li>
-<li>Harden configs (disable unsafe defaults)</li>
-<li>Encrypt and secure backups</li>
-<li>Monitor/audit DB access and admin actions</li>
-<li>Keep DB and drivers patched</li>
-</ul>
-<h2 id="dos-and-donts">Do’s and Don’ts<a class="headerlink" href="#dos-and-donts" title="Permanent link">&para;</a></h2>
-<p><strong>Do</strong>:</p>
-<ul>
-<li>Use driver query objects rather than building query strings.</li>
-<li>Validate and whitelist user-supplied fields (columns/keys).</li>
-<li>Restrict management interfaces and require MFA for admin access.</li>
-<li>Automate security testing in CI/CD pipelines.</li>
-</ul>
-<p><strong>Don’t</strong>:</p>
-<ul>
-<li>Expose DB ports/admin consoles to the public Internet.</li>
-<li>Accept raw JSON queries from clients or eval untrusted strings.</li>
-<li>Use root/admin DB accounts for application connections.</li>
-<li>Rely only on network controls to protect badly written queries.</li>
-</ul>
-<h2 id="examples-of-dangerous-patterns-brief">Examples of Dangerous Patterns (brief)<a class="headerlink" href="#examples-of-dangerous-patterns-brief" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Allowing client to submit <code>{ "$where": "this.balance &gt; 0" }</code> → remote code execution or heavy CPU.</li>
-<li>Concatenating user input into query language strings or shell commands for DB tools.</li>
-<li>Leaving MongoDB unsecured (no auth) listening on public IP.</li>
+<li>Lint with <a href="https://typescript-eslint.io/"><code>typescript-eslint</code></a> recommended sets plus <code>no-eval</code>, <code>no-implied-eval</code>, and <code>no-new-func</code>. Keep dependencies updated so new rules apply.</li>
+<li>Pin versions with a lockfile, review dependency changes, and monitor advisories. Frontend dependency-review specifics overlap with the <a href="Nodejs_Security_Cheat_Sheet.html">Node.js Security Cheat Sheet</a>.</li>
+<li>For third-party scripts loaded from a CDN, pin a Subresource Integrity hash with <code>crossorigin</code> handling per the <a href="Third_Party_Javascript_Management_Cheat_Sheet.html">Third Party JavaScript Management Cheat Sheet</a>.</li>
 </ul>
 <h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://www.mongodb.com/docs/manual/security/">MongoDB Security Official Document</a></li>
-<li><a href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/best-practices-security.html">Security best practices for Amazon DynamoDB</a></li>
-<li><a href="https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.6-Testing_for_NoSQL_Injection">WSTG - Testing for NoSQL Injection</a></li>
+<li>Issue <a href="https://github.com/OWASP/CheatSheetSeries/issues/2337">#2337</a> - proposal and discussion.</li>
+<li><a href="Nodejs_Security_Cheat_Sheet.html">Node.js Security Cheat Sheet</a>.</li>
+<li><a href="Third_Party_Javascript_Management_Cheat_Sheet.html">Third Party JavaScript Management Cheat Sheet</a>.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">MDN: eval</a> - why direct and indirect <code>eval</code> differ and why both are discouraged.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">MDN: Strict mode</a> - what strict mode changes.</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage">MDN: window.postMessage</a> - origin and source validation.</li>
+<li><a href="https://w3c.github.io/trusted-types/dist/spec/">W3C Trusted Types</a> - sink allowlisting for DOM injection.</li>
+<li><a href="https://www.typescriptlang.org/docs/handbook/2/functions.html#unknown">TypeScript Handbook: <code>unknown</code></a> - <code>any</code> versus <code>unknown</code>, and why <code>unknown</code> must be narrowed.</li>
+<li><a href="https://w3c.github.io/webappsec-csp/#can-compile-strings">CSP: <code>EnsureCSPDoesNotBlockStringCompilation</code></a> - what a policy must contain to actually block string-to-code compilation.</li>
+<li><a href="https://cwe.mitre.org/data/definitions/79.html">CWE-79: Cross-site Scripting</a>.</li>
+<li><a href="https://cwe.mitre.org/data/definitions/94.html">CWE-94: Code Injection</a>.</li>
+<li><a href="https://cwe.mitre.org/data/definitions/1321.html">CWE-1321: Prototype Pollution</a>.</li>
+<li><a href="https://cwe.mitre.org/data/definitions/1333.html">CWE-1333: ReDoS</a>.</li>
 </ul>
 
 
